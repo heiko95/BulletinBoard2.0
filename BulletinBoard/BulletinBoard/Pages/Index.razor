@@ -3,17 +3,19 @@
 <PageTitle>Index</PageTitle>
 
 
-<template id="itemTemplate">
-    <div style="background-color:red" >
-        <h3 class="template-header">{{label}}</h3>
-        <p class="template-content">{{content}}</p>
+<template id="itemTemplate" >
+   
+    <div class="full-image">      
         <img class="template-image" src="{{image}}" />
-  </div>
+        </div>
+  
 </template>
 
-<Carousel   ItemTemplate="itemTemplate" DataSource="items" HideArrows HideIndicators SlideShow AutoPlay Loop Interval="1500"></Carousel>
+<Carousel Style="height:100vh; width:100vw"  ItemTemplate="itemTemplate" DataSource="items" HideArrows HideIndicators SlideShow AutoPlay Loop Interval="199500"></Carousel>
 
 @*<ImageCard Name="Hallo" ImageBas64="test"></ImageCard>*@
+
+@*<PlannerCard></PlannerCard>*@
 
 
 @code {

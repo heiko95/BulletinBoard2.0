@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<Carousel DataSource="items" HideArrows HideIndicators SlideShow AutoPlay Loop Interval="1500"></Carousel>
+
+
+
+
+@code {
+  dynamic[] items = new dynamic[]{
+      new {label="First Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-1.jpg"},
+      new {label="Second Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-2.jpg"},
+      new {label="Third Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-3.jpg"},
+      new {label="Forth Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-4.jpg"},
+  };
+}
+
+
+
+

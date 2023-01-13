@@ -2,12 +2,23 @@
 
 <PageTitle>Index</PageTitle>
 
-<Carousel DataSource="items" HideArrows HideIndicators SlideShow AutoPlay Loop Interval="1500"></Carousel>
 
-<ImageCard Name="Hallo" ImageBas64="test"></ImageCard>
+<template id="itemTemplate">
+    <div style="background-color:red" >
+        <h3 class="template-header">{{label}}</h3>
+        <p class="template-content">{{content}}</p>
+        <img class="template-image" src="{{image}}" />
+  </div>
+</template>
+
+<Carousel   ItemTemplate="itemTemplate" DataSource="items" HideArrows HideIndicators SlideShow AutoPlay Loop Interval="1500"></Carousel>
+
+@*<ImageCard Name="Hallo" ImageBas64="test"></ImageCard>*@
 
 
 @code {
+  string itemTemplate = "itemTemplate";
+
   dynamic[] items = new dynamic[]{
       new {label="First Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-1.jpg"},
       new {label="Second Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-2.jpg"},

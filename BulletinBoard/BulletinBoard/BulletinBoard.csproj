@@ -8,11 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Smart.Blazor" Version="14.4.39" />
+    <PackageReference Include="BlazorStrap" Version="5.1.100" />
+    <PackageReference Include="BlazorStrap.V5" Version="5.1.100" />
   </ItemGroup>
 
 </Project>

@@ -3,32 +3,4 @@
 <PageTitle>Index</PageTitle>
 
 
-<template id="itemTemplate" >
-   
-    <div class="full-image">      
-        <img class="template-image" src="{{image}}" />
-        </div>
-  
-</template>
-
-<Carousel Style="height:100vh; width:100vw"  ItemTemplate="itemTemplate" DataSource="items" HideArrows HideIndicators SlideShow AutoPlay Loop Interval="199500"></Carousel>
-
-@*<ImageCard Name="Hallo" ImageBas64="test"></ImageCard>*@
-
-@*<PlannerCard></PlannerCard>*@
-
-
-@code {
-  string itemTemplate = "itemTemplate";
-
-  dynamic[] items = new dynamic[]{
-      new {label="First Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-1.jpg"},
-      new {label="Second Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-2.jpg"},
-      new {label="Third Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-3.jpg"},
-      new {label="Forth Label", content="Additional Information", image="https://htmlelements.com/demos/images/carousel-medium-4.jpg"},
-  };
-}
-
-
-
-
+<PlannerCard></PlannerCard>

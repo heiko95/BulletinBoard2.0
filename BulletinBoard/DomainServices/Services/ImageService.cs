@@ -1,11 +1,27 @@
-﻿using BulletinBoard.Data;
-using BulletinBoard.Services.Contracts;
+﻿using hgSoftware.DomainServices.IncomingPorts;
+using hgSoftware.DomainServices.Models;
 using System.Net;
 
-namespace BulletinBoard.Services
+namespace hgSoftware.DomainServices.Services
 {
     public class ImageService : IImageService
     {
+        #region Private Fields
+
+        private readonly string? _imageFolder;
+
+        #endregion Private Fields
+
+        #region Public Constructors
+
+        public ImageService()
+        {
+            //_imageFolder = namedOptionsAccessor.Get(ElementSettings.ImageScreenSettings).FolderName;
+            //var t = AppContext.BaseDirectory;
+        }
+
+        #endregion Public Constructors
+
         #region Public Methods
 
         public IList<ImageElement> GetPictures()

@@ -1,6 +1,6 @@
-﻿using BulletinBoard.Data;
+﻿using hgSoftware.DomainServices.Models;
 
-namespace BulletinBoard.Services.Contracts
+namespace hgSoftware.DomainServices.IncomingPorts
 {
     public interface IWelcomeService
     {

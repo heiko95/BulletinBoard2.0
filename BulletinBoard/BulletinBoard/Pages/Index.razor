@@ -1,7 +1,8 @@
 ﻿@page "/"
-@using BulletinBoard.Data
 @using BulletinBoard.Services.Contracts
+@using hgSoftware.DomainServices.Models
 @inject IBoardElementService BoardElementService
+
 
 
 <PageTitle>Index</PageTitle>
@@ -63,6 +64,7 @@
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
+        await BoardElementService.InitElements();
         Elements = BoardElementService.GetCurrentElements();
     }
 

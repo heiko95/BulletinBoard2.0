@@ -1,8 +1,8 @@
-﻿using BulletinBoard.Data;
-using BulletinBoard.Services.Contracts;
+﻿using hgSoftware.DomainServices.IncomingPorts;
+using hgSoftware.DomainServices.Models;
 using System.Net;
 
-namespace BulletinBoard.Services
+namespace hgSoftware.DomainServices.Services
 {
     public class WelcomeService : IWelcomeService
     {

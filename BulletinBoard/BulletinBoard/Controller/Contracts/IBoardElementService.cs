@@ -1,4 +1,4 @@
-﻿using BulletinBoard.Data;
+﻿using hgSoftware.DomainServices.Models;
 
 namespace BulletinBoard.Services.Contracts
 {
@@ -7,6 +7,8 @@ namespace BulletinBoard.Services.Contracts
         #region Public Methods
 
         IList<IElement> GetCurrentElements();
+
+        Task InitElements();
 
         #endregion Public Methods
     }

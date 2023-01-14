@@ -1,4 +1,4 @@
-﻿namespace BulletinBoard.Data
+﻿namespace hgSoftware.DomainServices.Models
 {
     public class BibleTextElement : IElement
     {

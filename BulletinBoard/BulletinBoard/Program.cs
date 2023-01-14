@@ -1,11 +1,18 @@
-using Smart.Blazor;
+using BlazorStrap;
+using BulletinBoard.Services;
+using BulletinBoard.Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSmart();
+builder.Services.AddBlazorStrap();
+builder.Services.AddSingleton<IBibleTextService, BibleTextService>();
+builder.Services.AddSingleton<IBoardElementService, BoardElementService>();
+builder.Services.AddSingleton<IImageService, ImageService>();
+builder.Services.AddSingleton<IPlannerService, PlannerService>();
+builder.Services.AddSingleton<IWelcomeService, WelcomeService>();
 
 var app = builder.Build();
 

@@ -6,24 +6,24 @@
 
 .planner {
     display: grid;
-    grid-template-columns: [first] auto [end];
-    grid-template-rows: auto;
-    align-items: center;
-    justify-items: center;
+/*    grid-template-columns: [first] auto [end]*/;
+    /*grid-template-rows: auto;*/
+    /*align-items: center;*/
+    /*justify-items: center;*/
     /*background-color: aqua;*/
-    height: 100vh;
-    width: 100vw;
+/*    height: 50vh;
+    width: 100vw;*/
     /*background-image: linear-gradient(180deg, white 0%, #a3bfe4 45%, #7ca6d8 81%, #5793C9 100%);*/
 }
 
 
 .planner__container {
-    position: absolute;
-    display: grid;
-    justify-content: center;
+    /*position: absolute;*/
+    /*display: grid;*/
+    /*justify-content: center;*/
 
-    grid-template-columns: [first] auto [end];
-    grid-template-rows: auto;
+    /*grid-template-columns: [first] auto [end];*/
+    /*grid-template-rows: auto;*/
     row-gap: 10px;
 }
 
@@ -33,7 +33,7 @@
 
 .planner__list {
     display: grid;
-    position: relative;
+    /*position: relative;*/
     grid-template-columns: [first] auto [end];
     grid-template-rows: auto;
 /*    align-items: center;
@@ -42,13 +42,13 @@
 
 .planner__list-item {
     display: grid;
-    grid-template-columns: [first] 100px [line2] 100px [line3] 150px [col4-start] auto [five] 400px [six] 100px [end];
+    grid-template-columns: [first] 100px [line2] 100px [line3] 150px [col4-start] auto [five] 250px [six] 250px [end];
     grid-template-rows: auto;
     grid-gap: 20px;
     grid-row-gap: 20px;
     vertical-align: central;
     list-style-type: none;
-    font-size: 30px;
+    font-size: 1.5rem;
     white-space: nowrap;
 }
 .planner__list-item-list {
@@ -61,6 +61,7 @@ font-size: 40px;
 }
 
 .day {
+    text-align: right;
 }
 
 .date {
@@ -78,13 +79,32 @@ font-size: 40px;
 .bibleverse {
     text-align: left;
     justify-self: start;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    /*margin-left: 1vw;*/
+    /*margin-right: 1vw;*/
 }
 
 .location {
   text-align: left;
-  margin-left:1vw;
+  /*margin-left:1vw;*/
+}
+
+.dates-container {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+.event_component {
+    display: grid;
+}
+
+.header-dates {
+    font-size: 2rem;
+    padding-left: 1rem;
 }
 
 
@@ -93,8 +113,9 @@ html, body {
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+   /* height: 100vh;
+    width: 100vw;*/
+    overflow: hidden;
 }
 
 h1:focus {

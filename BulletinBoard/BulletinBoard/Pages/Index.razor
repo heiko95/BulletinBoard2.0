@@ -1,0 +1,110 @@
+﻿@page "/"
+@using BulletinBoard.Data
+@using BulletinBoard.Services.Contracts
+@inject IBoardElementService BoardElementService
+
+
+<PageTitle>Index</PageTitle>
+
+
+<BSCarousel NumberOfItems="@items.Count" Interval=2000 style="height:100vh">   
+        @foreach(var element in Elements)
+        {
+            switch(element)
+            {
+                case ImageElement:
+                var imageElement = element as ImageElement;  
+                <BSCarouselItem>
+                     <img src=@imageElement?.Base64Image alt=@imageElement?.Id style="width:100%"/>
+                 </BSCarouselItem>                
+                    break;
+                case PlannerElement:
+                  var plannerElement = element as PlannerElement; 
+                  <BSCarouselItem>
+                      <div>
+                          <h1>@plannerElement?.CurrentMonth.Month</h1> 
+                          @foreach(var eventElement in plannerElement.CurrentMonth.Events )
+                            {
+                                <div>
+                                    <p>@($"{eventElement.Day} {eventElement.Date} {eventElement.Time} {eventElement.Description} {eventElement.BibleText} {eventElement.Location}")</p>
+                               
+                                </div>
+                            }
+                        <h2>@plannerElement?.FollowingMonth.Month</h2>
+                        @foreach(var eventElement in plannerElement.FollowingMonth.Events )
+                            {
+                                 <div>
+                                    <p>@($"{eventElement.Day} {eventElement.Date} {eventElement.Time} {eventElement.Description} {eventElement.BibleText} {eventElement.Location}")</p>
+                               
+                                </div>
+                            }
+                      </div>            
+                 </BSCarouselItem>    
+                    break;
+                case BibleTextElement:
+                 var bibleTextElement = element as BibleTextElement; 
+                  <BSCarouselItem>
+                      <div>
+                          <h1>@bibleTextElement?.BiblePassage</h1>
+                          <h2>@bibleTextElement?.BibleText</h2>
+                      </div>                     
+                 </BSCarouselItem>    
+                    break;
+            }
+        }
+     
+</BSCarousel>
+
+
+@code{
+
+    IList<IElement> Elements = new List<IElement>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        Elements = BoardElementService.GetCurrentElements();
+    }
+
+
+    IList<Item> items = new List<Item>
+    {
+        new Item
+        {
+            Source= "https://www.w3schools.com/howto/img_mountains_wide.jpg",
+            Alt="Bild1",
+            Caption="Slide1",
+            Header= "Header1"
+        },
+         new Item
+        {
+            Source= "https://www.w3schools.com/howto/img_snow_wide.jpg",
+            Alt="Bild2",
+            Caption="Slide2",
+            Header= "Header2"
+        },
+         new Item
+        {
+            Source= "https://www.w3schools.com/howto/img_nature_wide.jpg",
+            Alt="Bild3",
+            Caption="Slide2",
+            Header= "Header2"
+        }
+    };
+
+
+    class Item
+    {
+        public string Source { get; set; } = "";
+        public string Alt { get; set; } = "";
+        public string Caption { get; set; } = ""; 
+        public string Header { get; set; } = "";
+    
+    }
+}
+
+
+
+
+
+

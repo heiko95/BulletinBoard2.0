@@ -12,7 +12,6 @@
 else
 {
 
-
     <BSCarousel NumberOfItems="@Elements.Count" Interval=2000 style="height:100vh">   
             @foreach(var element in Elements)
             {
@@ -27,6 +26,10 @@ else
                     case PlannerElement:
                       var plannerElement = element as PlannerElement; 
                       <BSCarouselItem>
+                          <PlannerCard PlannerElement=@plannerElement></PlannerCard>
+
+
+@*
                           <div>
                               <h1>@plannerElement?.CurrentMonth.Month</h1> 
                               @foreach(var eventElement in plannerElement.CurrentMonth.Events )
@@ -44,7 +47,7 @@ else
                                
                                     </div>
                                 }
-                          </div>            
+                          </div>            *@
                      </BSCarouselItem>    
                         break;
                     case BibleTextElement:

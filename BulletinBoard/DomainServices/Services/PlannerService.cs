@@ -42,12 +42,12 @@ namespace hgSoftware.DomainServices.Services
             {
                 CurrentMonth = new PlannerSection()
                 {
-                    Month = "Januar",
+                    Month = "gsdfsgd",
                     Events = CreateTestElements(7, "01")
                 },
                 FollowingMonth = new PlannerSection()
                 {
-                    Month = "Februar",
+                    Month = "jreztjjsdrzh",
                     Events = CreateTestElements(3, "02")
                 }
             };

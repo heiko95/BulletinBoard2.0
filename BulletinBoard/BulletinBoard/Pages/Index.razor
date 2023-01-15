@@ -5,54 +5,61 @@
 
 <PageTitle>Index</PageTitle>
 
+@if (Elements.Count == 0)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
 
-<BSCarousel NumberOfItems="@Elements.Count" Interval=2000 style="height:100vh">   
-        @foreach(var element in Elements)
-        {
-            switch(element)
+
+    <BSCarousel NumberOfItems="@Elements.Count" Interval=2000 style="height:100vh">   
+            @foreach(var element in Elements)
             {
-                case ImageElement:
-                var imageElement = element as ImageElement;  
-                <BSCarouselItem>
-                     <img src=@imageElement?.Base64Image alt=@imageElement?.Id style="width:100%"/>
-                 </BSCarouselItem>                
-                    break;
-                case PlannerElement:
-                  var plannerElement = element as PlannerElement; 
-                  <BSCarouselItem>
-                      <div>
-                          <h1>@plannerElement?.CurrentMonth.Month</h1> 
-                          @foreach(var eventElement in plannerElement.CurrentMonth.Events )
-                            {
-                                <div>
-                                    <p>@($"{eventElement.Day} {eventElement.Date} {eventElement.Time} {eventElement.Description} {eventElement.BibleText} {eventElement.Location}")</p>
+                switch(element)
+                {
+                    case ImageElement:
+                    var imageElement = element as ImageElement;  
+                    <BSCarouselItem>
+                         <img src=@imageElement?.Base64Image alt=@imageElement?.Id style="width:100%"/>
+                     </BSCarouselItem>                
+                        break;
+                    case PlannerElement:
+                      var plannerElement = element as PlannerElement; 
+                      <BSCarouselItem>
+                          <div>
+                              <h1>@plannerElement?.CurrentMonth.Month</h1> 
+                              @foreach(var eventElement in plannerElement.CurrentMonth.Events )
+                                {
+                                    <div>
+                                        <p>@($"{eventElement.Day} {eventElement.Date} {eventElement.Time} {eventElement.Description} {eventElement.BibleText} {eventElement.Location}")</p>
                                
-                                </div>
-                            }
-                        <h2>@plannerElement?.FollowingMonth.Month</h2>
-                        @foreach(var eventElement in plannerElement.FollowingMonth.Events )
-                            {
-                                 <div>
-                                    <p>@($"{eventElement.Day} {eventElement.Date} {eventElement.Time} {eventElement.Description} {eventElement.BibleText} {eventElement.Location}")</p>
+                                    </div>
+                                }
+                            <h2>@plannerElement?.FollowingMonth.Month</h2>
+                            @foreach(var eventElement in plannerElement.FollowingMonth.Events )
+                                {
+                                     <div>
+                                        <p>@($"{eventElement.Day} {eventElement.Date} {eventElement.Time} {eventElement.Description} {eventElement.BibleText} {eventElement.Location}")</p>
                                
-                                </div>
-                            }
-                      </div>            
-                 </BSCarouselItem>    
-                    break;
-                case BibleTextElement:
-                 var bibleTextElement = element as BibleTextElement; 
-                  <BSCarouselItem>
-                      <div>
-                          <h1>@bibleTextElement?.BiblePassage</h1>
-                          <h2>@bibleTextElement?.BibleText</h2>
-                      </div>                     
-                 </BSCarouselItem>    
-                    break;
-            }
-        }
-     
-</BSCarousel>
+                                    </div>
+                                }
+                          </div>            
+                     </BSCarouselItem>    
+                        break;
+                    case BibleTextElement:
+                     var bibleTextElement = element as BibleTextElement; 
+                      <BSCarouselItem>
+                          <div>
+                              <h1>@bibleTextElement?.BiblePassage</h1>
+                              <h2>@bibleTextElement?.BibleText</h2>
+                          </div>                     
+                     </BSCarouselItem>    
+                        break;
+                }
+            }     
+    </BSCarousel>
+}
 
 
 @code{

@@ -13,7 +13,7 @@
         #region Public Properties
 
         public int DisplayCount { get; set; }
-        public string? FileName { get; set; }
+        public string FileName { get; set; } = string.Empty;
         public string FolderName { get; set; } = string.Empty;
 
         #endregion Public Properties

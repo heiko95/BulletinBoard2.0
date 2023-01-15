@@ -30,32 +30,27 @@ namespace hgSoftware.DomainServices.Services
             var userFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             var appDataFolder = Path.Combine(userFolder, "BulletinBoard");
             CreateDirectory(appDataFolder);
+            CreateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.EventScreenSettings).FolderName));
+            CreateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.ImageScreenSettings).FolderName));
+            CreateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.WelcomeScreenSettings).FolderName));
 
-            var eventTask = Task.Run(()
-                => CheckAndUpdateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.EventScreenSettings).FolderName)));
-            var imageTask = Task.Run(()
-                => CheckAndUpdateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.ImageScreenSettings).FolderName)));
-            var welcomeTask = Task.Run(()
-                => CheckAndUpdateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.WelcomeScreenSettings).FolderName)));
-            await Task.WhenAll(eventTask, imageTask, welcomeTask);
+            await UpdateDirectory(appDataFolder);
         }
 
         #endregion Public Methods
 
         #region Private Methods
 
-        private void CheckAndUpdateDirectory(string folderName)
-        {
-            CreateDirectory(folderName);
-            // DO Rsync Stuff here
-        }
-
         private void CreateDirectory(string folderName)
         {
-            if (!string.IsNullOrEmpty(folderName) && !Directory.Exists(folderName))
-            {
-                Directory.CreateDirectory(folderName);
-            }
+            if (string.IsNullOrEmpty(folderName) || Directory.Exists(folderName)) return;
+            Directory.CreateDirectory(folderName);
+        }
+
+        private async Task UpdateDirectory(string folderName)
+        {
+            await Task.Delay(1000);
+            // TODO Do Rsync Stuff here
         }
 
         #endregion Private Methods

@@ -1,6 +1,7 @@
 ﻿using hgSoftware.DomainServices.IncomingPorts;
 using hgSoftware.DomainServices.Models;
-using System.Net;
+using hgSoftware.DomainServices.SettingModels;
+using Microsoft.Extensions.Options;
 
 namespace hgSoftware.DomainServices.Services
 {
@@ -8,16 +9,17 @@ namespace hgSoftware.DomainServices.Services
     {
         #region Private Fields
 
-        private readonly string? _imageFolder;
+        private readonly string _imagePath;
 
         #endregion Private Fields
 
         #region Public Constructors
 
-        public ImageService()
+        public ImageService(IOptionsMonitor<ElementSettings> namedOptionsAccessor)
         {
-            //_imageFolder = namedOptionsAccessor.Get(ElementSettings.ImageScreenSettings).FolderName;
-            //var t = AppContext.BaseDirectory;
+            _imagePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                                      "BulletinBoard",
+                                      namedOptionsAccessor.Get(ElementSettings.ImageScreenSettings).FolderName);
         }
 
         #endregion Public Constructors
@@ -25,28 +27,9 @@ namespace hgSoftware.DomainServices.Services
         #region Public Methods
 
         public IList<ImageElement> GetPictures()
-        {
-            return DefaultData();
-        }
+            => (from imagepath in Directory.GetFiles(_imagePath, "*.jpg")
+                select new ImageElement(imagepath)).ToList();
 
         #endregion Public Methods
-
-        #region Private Methods
-
-        private IList<ImageElement> DefaultData()
-        {
-            var images = new List<ImageElement>();
-            using (WebClient webClient = new WebClient())
-            {
-                var image = Convert.ToBase64String(webClient.DownloadData(@"https://www.w3schools.com/howto/img_mountains_wide.jpg"));
-                images.Add(new ImageElement()
-                {
-                    Base64Image = string.Format("data:image/jpg;base64,{0}", image)
-                });
-            }
-            return images;
-        }
-
-        #endregion Private Methods
     }
 }

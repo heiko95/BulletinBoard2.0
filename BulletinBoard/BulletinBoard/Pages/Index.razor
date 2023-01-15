@@ -3,12 +3,10 @@
 @using hgSoftware.DomainServices.Models
 @inject IBoardElementService BoardElementService
 
-
-
 <PageTitle>Index</PageTitle>
 
 
-<BSCarousel NumberOfItems="@items.Count" Interval=2000 style="height:100vh">   
+<BSCarousel NumberOfItems="@Elements.Count" Interval=2000 style="height:100vh">   
         @foreach(var element in Elements)
         {
             switch(element)
@@ -66,42 +64,6 @@
         await base.OnInitializedAsync();
         await BoardElementService.InitElements();
         Elements = BoardElementService.GetCurrentElements();
-    }
-
-
-    IList<Item> items = new List<Item>
-    {
-        new Item
-        {
-            Source= "https://www.w3schools.com/howto/img_mountains_wide.jpg",
-            Alt="Bild1",
-            Caption="Slide1",
-            Header= "Header1"
-        },
-         new Item
-        {
-            Source= "https://www.w3schools.com/howto/img_snow_wide.jpg",
-            Alt="Bild2",
-            Caption="Slide2",
-            Header= "Header2"
-        },
-         new Item
-        {
-            Source= "https://www.w3schools.com/howto/img_nature_wide.jpg",
-            Alt="Bild3",
-            Caption="Slide2",
-            Header= "Header2"
-        }
-    };
-
-
-    class Item
-    {
-        public string Source { get; set; } = "";
-        public string Alt { get; set; } = "";
-        public string Caption { get; set; } = ""; 
-        public string Header { get; set; } = "";
-    
     }
 }
 

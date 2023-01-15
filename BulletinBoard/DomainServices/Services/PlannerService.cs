@@ -1,7 +1,7 @@
-﻿using BulletinBoard.Data;
-using BulletinBoard.Services.Contracts;
+﻿using hgSoftware.DomainServices.IncomingPorts;
+using hgSoftware.DomainServices.Models;
 
-namespace BulletinBoard.Services
+namespace hgSoftware.DomainServices.Services
 {
     public class PlannerService : IPlannerService
     {
@@ -42,12 +42,12 @@ namespace BulletinBoard.Services
             {
                 CurrentMonth = new PlannerSection()
                 {
-                    Month = "Januar",
+                    Month = "gsdfsgd",
                     Events = CreateTestElements(7, "01")
                 },
                 FollowingMonth = new PlannerSection()
                 {
-                    Month = "Februar",
+                    Month = "jreztjjsdrzh",
                     Events = CreateTestElements(3, "02")
                 }
             };

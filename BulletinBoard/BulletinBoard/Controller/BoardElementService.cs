@@ -1,5 +1,6 @@
-﻿using BulletinBoard.Data;
-using BulletinBoard.Services.Contracts;
+﻿using BulletinBoard.Services.Contracts;
+using hgSoftware.DomainServices.IncomingPorts;
+using hgSoftware.DomainServices.Models;
 
 namespace BulletinBoard.Services
 {
@@ -9,6 +10,7 @@ namespace BulletinBoard.Services
 
         private readonly IBibleTextService _bibleTextService;
         private readonly IImageService _imageService;
+        private readonly IInitService _initService;
         private readonly IPlannerService _plannerService;
         private readonly IWelcomeService _welcomeService;
 
@@ -20,12 +22,14 @@ namespace BulletinBoard.Services
             IWelcomeService welcomeService,
             IImageService imageService,
             IPlannerService plannerService,
-            IBibleTextService bibleTextService)
+            IBibleTextService bibleTextService,
+            IInitService initService)
         {
             _welcomeService = welcomeService;
             _imageService = imageService;
             _plannerService = plannerService;
             _bibleTextService = bibleTextService;
+            _initService = initService;
         }
 
         #endregion Public Constructors
@@ -40,6 +44,11 @@ namespace BulletinBoard.Services
             elements.Add(_plannerService.GetPlanner());
             elements.AddRange(_imageService.GetPictures());
             return elements;
+        }
+
+        public async Task InitElements()
+        {
+            await _initService.InitializeBulletinBoard();
         }
 
         #endregion Public Methods

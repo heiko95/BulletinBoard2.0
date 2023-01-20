@@ -4,10 +4,18 @@
     {
         #region Public Properties
 
-        public PlannerSection CurrentMonth { get; set; }
-        public PlannerSection FollowingMonth { get; set; }
-        public Guid Id { get; }
+        public Guid Id { get; } = Guid.NewGuid();
+        public List<PlannerSection> PlannerSections { get; } = new List<PlannerSection>();
 
         #endregion Public Properties
+
+        #region Public Methods
+
+        public void AddPlannerSection(PlannerSection plannerSection)
+        {
+            PlannerSections.Add(plannerSection);
+        }
+
+        #endregion Public Methods
     }
 }

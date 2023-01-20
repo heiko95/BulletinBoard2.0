@@ -4,8 +4,8 @@
     {
         #region Public Properties
 
-        public string BiblePassage { get; set; }
-        public string BibleText { get; set; }
+        public string BiblePassage { get; set; } = string.Empty;
+        public string BibleText { get; set; } = string.Empty;
         public Guid Id { get; }
 
         #endregion Public Properties

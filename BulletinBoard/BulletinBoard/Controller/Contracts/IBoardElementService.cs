@@ -6,7 +6,7 @@ namespace BulletinBoard.Services.Contracts
     {
         #region Public Methods
 
-        IList<IElement> GetCurrentElements();
+        Task<IList<IElement>> GetCurrentElements();
 
         Task InitElements();
 

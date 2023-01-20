@@ -1,7 +1,6 @@
 ﻿using hgSoftware.DomainServices.IncomingPorts;
 using hgSoftware.DomainServices.Models;
-using hgSoftware.DomainServices.SettingModels;
-using Microsoft.Extensions.Options;
+using hgSoftware.DomainServices.OutgoingPorts;
 
 namespace hgSoftware.DomainServices.Services
 {
@@ -9,17 +8,15 @@ namespace hgSoftware.DomainServices.Services
     {
         #region Private Fields
 
-        private readonly string _imagePath;
+        private readonly IImageRepository _imageRepository;
 
         #endregion Private Fields
 
         #region Public Constructors
 
-        public ImageService(IOptionsMonitor<ElementSettings> namedOptionsAccessor)
+        public ImageService(IImageRepository imageRepository)
         {
-            _imagePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
-                                      "BulletinBoard",
-                                      namedOptionsAccessor.Get(ElementSettings.ImageScreenSettings).FolderName);
+            _imageRepository = imageRepository;
         }
 
         #endregion Public Constructors
@@ -27,8 +24,7 @@ namespace hgSoftware.DomainServices.Services
         #region Public Methods
 
         public IList<ImageElement> GetPictures()
-            => (from imagepath in Directory.GetFiles(_imagePath, "*.jpg")
-                select new ImageElement(imagepath)).ToList();
+            => _imageRepository.GetImages();
 
         #endregion Public Methods
     }

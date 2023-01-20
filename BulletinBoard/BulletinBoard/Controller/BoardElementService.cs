@@ -36,14 +36,17 @@ namespace BulletinBoard.Services
 
         #region Public Methods
 
-        public IList<IElement> GetCurrentElements()
+        public async Task<IList<IElement>> GetCurrentElements()
         {
-            var elements = new List<IElement>();
-            elements.Add(_welcomeService.GetWelcomePicture());
-            elements.Add(_bibleTextService.GetBibleElementOfToday());
-            elements.Add(_plannerService.GetPlanner());
-            elements.AddRange(_imageService.GetPictures());
-            return elements;
+            return await Task.Run(() =>
+            {
+                var elements = new List<IElement>();
+                elements.AddIfNotNull(_welcomeService.GetWelcomePicture());
+                elements.AddIfNotNull(_plannerService.GetPlanner());
+                elements.AddIfNotNull(_bibleTextService.GetBibleElementOfToday());
+                elements.AddRange(_imageService.GetPictures());
+                return elements;
+            });
         }
 
         public async Task InitElements()

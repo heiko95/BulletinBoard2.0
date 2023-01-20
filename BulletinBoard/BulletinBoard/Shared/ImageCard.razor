@@ -1,16 +1,10 @@
-﻿
-<div style="background-color:red" >
+﻿@using hgSoftware.DomainServices.Models
 
-<h5>@Name</h5>
-<h5>@ImageBas64</h5>
 
-</div>
+<img src=@ImageElement.Base64Image alt=@ImageElement.ImageName style="width:100%"/>
 
 @code {
+    [Parameter]
+    public ImageElement ImageElement { get; set; } = new ImageElement();
 
-   [Parameter]
-   public string Name {get; set;}
-
-   [Parameter]
-   public string ImageBas64 {get; set;}  
 }

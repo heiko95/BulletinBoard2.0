@@ -11,7 +11,7 @@
                  <li class="planner__list-item">
                     <p class="day planner__list-item-list">@eventElement.Day</p>
                     <p class="date planner__list-item-list">@eventElement.Date</p>
-                    <p class="time planner__list-item-list">@eventElement.Time</p>
+                    <p class="time planner__list-item-list">@eventElement.DateTime.ToString("HH:mm")</p>
                     <p class="description planner__list-item-list">@eventElement.Description</p>
                     <p class="bibleverse planner__list-item-list">@eventElement.BibleText</p>
                     <p class="location planner__list-item-list">@eventElement.Location</p>
@@ -25,8 +25,7 @@
 
 
 @code{
-
     [Parameter]
-    public PlannerSection? PlannerSection {get; set;}
+    public PlannerSection PlannerSection { get; set; } = new PlannerSection();
 
 }

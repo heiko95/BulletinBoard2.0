@@ -2,18 +2,17 @@
 
 <div class="dates-container">
     <div class ="event_component">
-        <EventCard PlannerSection=@PlannerElement.CurrentMonth></EventCard>
+        @for(var i = 0; i < PlannerElement.PlannerSections.Count; i++)
+        {
+             <EventCard PlannerSection=@PlannerElement.PlannerSections[i]></EventCard>
+        }
     </div>
-    <div class="event_component">
-        <EventCard PlannerSection=@PlannerElement.FollowingMonth></EventCard>
-    </div>
+   
 </div>
 
-
 @code{
-
     [Parameter]
-    public PlannerElement PlannerElement {get; set;}
+    public PlannerElement PlannerElement { get; set; } = new PlannerElement();
 
 }
 

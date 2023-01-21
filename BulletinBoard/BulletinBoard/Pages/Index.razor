@@ -1,81 +1,66 @@
 ﻿@page "/"
 @using BulletinBoard.Services.Contracts
 @using hgSoftware.DomainServices.Models
+@using hgSoftware.DomainServices.SettingModels
 @inject IBoardElementService BoardElementService
 
-<PageTitle>Index</PageTitle>
+<PageTitle>BulletinBoard</PageTitle>
 
-@if (Elements.Count == 0)
+@if (Elements.Count > 0 && DataIsLoaded)
+{
+    <BSCarousel style="height:100vh">   
+        @foreach(var element in Elements)
+        {
+           
+            @switch(element)
+            {
+                case ImageElement:    
+                    <BSCarouselItem Interval="@SlideSettings.ImageInterval">
+                        <ImageCard ImageElement=@(element as ImageElement)></ImageCard>
+                    </BSCarouselItem>
+                    break;
+                case PlannerElement:        
+                    <BSCarouselItem Interval="@SlideSettings.PlannerInterval">
+                        <PlannerCard PlannerElement=@(element as PlannerElement)></PlannerCard>   
+                    </BSCarouselItem>
+                    break;
+                case BibleTextElement:
+                    <BSCarouselItem Interval="@SlideSettings.BibleTextInterval">                                      
+                        <div>
+                            <h1>@((element as BibleTextElement).BiblePassage)</h1>
+                            <h2>@((element as BibleTextElement).BibleText)</h2>
+                        </div> 
+                    </BSCarouselItem>
+                    break;
+            }                 
+        }     
+    </BSCarousel>
+}
+else 
 {
     <p><em>Loading...</em></p>
-}
-else
-{
-
-    <BSCarousel NumberOfItems="@Elements.Count" Interval=2000 style="height:100vh">   
-            @foreach(var element in Elements)
-            {
-                switch(element)
-                {
-                    case ImageElement:
-                    var imageElement = element as ImageElement;  
-                    <BSCarouselItem>
-                         <img src=@imageElement?.Base64Image alt=@imageElement?.Id style="width:100%"/>
-                     </BSCarouselItem>                
-                        break;
-                    case PlannerElement:
-                      var plannerElement = element as PlannerElement; 
-                      <BSCarouselItem>
-                          <PlannerCard PlannerElement=@plannerElement></PlannerCard>
-
-
-@*
-                          <div>
-                              <h1>@plannerElement?.CurrentMonth.Month</h1> 
-                              @foreach(var eventElement in plannerElement.CurrentMonth.Events )
-                                {
-                                    <div>
-                                        <p>@($"{eventElement.Day} {eventElement.Date} {eventElement.Time} {eventElement.Description} {eventElement.BibleText} {eventElement.Location}")</p>
-                               
-                                    </div>
-                                }
-                            <h2>@plannerElement?.FollowingMonth.Month</h2>
-                            @foreach(var eventElement in plannerElement.FollowingMonth.Events )
-                                {
-                                     <div>
-                                        <p>@($"{eventElement.Day} {eventElement.Date} {eventElement.Time} {eventElement.Description} {eventElement.BibleText} {eventElement.Location}")</p>
-                               
-                                    </div>
-                                }
-                          </div>            *@
-                     </BSCarouselItem>    
-                        break;
-                    case BibleTextElement:
-                     var bibleTextElement = element as BibleTextElement; 
-                      <BSCarouselItem>
-                          <div>
-                              <h1>@bibleTextElement?.BiblePassage</h1>
-                              <h2>@bibleTextElement?.BibleText</h2>
-                          </div>                     
-                     </BSCarouselItem>    
-                        break;
-                }
-            }     
-    </BSCarousel>
 }
 
 
 @code{
 
     IList<IElement> Elements = new List<IElement>();
+    SlideSettings SlideSettings = new SlideSettings();
+    int  Interval = 0;
+    bool DataIsLoaded = false;
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
-        await base.OnInitializedAsync();
         await BoardElementService.InitElements();
-        Elements = BoardElementService.GetCurrentElements();
+        SlideSettings = BoardElementService.GetSlideSettings();
+        Elements = await BoardElementService.GetCurrentElements();
+        if (Elements.Count > 1) Interval = 2000;
+        DataIsLoaded = true;
+
     }
 }
+
+
 
 
 

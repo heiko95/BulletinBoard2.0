@@ -24,10 +24,10 @@ namespace hgSoftware.DomainServices.Models
 
         private static List<int> GetVerses(string versetext)
         {
-            if (!Regex.IsMatch(versetext, "^([0-9]+([-.][0-9]+)?)(;[0-9]+([-.][0-9]+)?)?$")) throw new FormatException(versetext);
+            if (!Regex.IsMatch(versetext, "^([0-9]+([-.][0-9]+)?)(&[0-9]+([-.][0-9]+)?)?$")) throw new FormatException(versetext);
 
             var verses = new List<int>();
-            var sections = versetext.Split(';');
+            var sections = versetext.Split('&');
             foreach (var section in sections)
             {
                 if (Regex.IsMatch(section, "^[0-9]+$"))

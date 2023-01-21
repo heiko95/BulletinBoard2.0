@@ -31,25 +31,34 @@
     font-size: 50px;    
 }
 
+.event_component {
+    width: 80vw;
+    background-color: rgba(255,255,255,1);
+    padding: 80px 100px 80px 100px;
+    filter: drop-shadow(5px 5px 30px black);
+    border-radius: 50px;
+}
+
 .planner__list {
     display: grid;
     /*position: relative;*/
-    grid-template-columns: [first] auto [end];
-    grid-template-rows: auto;
-/*    align-items: center;
+    /*    align-items: center;
     justify-items: center;*/
+/*    width: 70vw;
+    background-color: rgba(255,255,255,1);
+    padding: 80px 100px 80px 100px;
+    filter: drop-shadow(5px 5px 30px black);
+    border-radius: 50px;*/
 }
 
 .planner__list-item {
     display: grid;
-    grid-template-columns: [first] 100px [line2] 100px [line3] 150px [col4-start] auto [five] 250px [six] 250px [end];
+    grid-template-columns: [first] 50px [line2] 80px [line3] 150px [col4-start] auto [five] 250px [six] 200px [end];
     grid-template-rows: auto;
-    grid-gap: 20px;
-    grid-row-gap: 20px;
     vertical-align: central;
     list-style-type: none;
     font-size: 1.5rem;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 .planner__list-item-list {
     display: grid;
@@ -57,11 +66,11 @@
 }
 
 .month {
-font-size: 40px;
+    font-size: 40px;
 }
 
 .day {
-    text-align: right;
+    text-align: left;
 }
 
 .date {
@@ -86,6 +95,8 @@ font-size: 40px;
 .location {
   text-align: left;
   /*margin-left:1vw;*/
+/*  justify-self:right;
+  align-self: start;*/
 }
 
 .dates-container {
@@ -96,6 +107,11 @@ font-size: 40px;
     grid-auto-flow: row;
     height: 100vh;
     width: 100vw;
+    background-size: 120vw 120vh;
+    /*background-image: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.85) 32.9%, rgba(64, 118, 130, 0.85) 33.15%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%), url("../css/assets/church.jpg");*/
+    background-image: linear-gradient(95.7391704773deg, rgba(64, 118, 130, 0.85) 42.9%, rgba(128, 128, 128, 0.85) 43.15%), 
+        linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%), 
+        url("../css/assets/church.jpg");
 }
 
 .event_component {
@@ -117,7 +133,9 @@ font-size: 40px;
     height: 100vh;
     width: 100vw;
     background-size: 120vw 120vh;
-    background-image: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.85) 32.9%, rgba(64, 118, 130, 0.85) 33.15%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%), url("../css/assets/bible.jpg");
+    background-image: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.85) 32.9%, rgba(64, 118, 130, 0.85) 33.15%), 
+        linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%), 
+        url("../css/assets/church.jpg");
 }
 
 .bibleversecard {
@@ -176,8 +194,8 @@ body {
     /* height: 100vh;
     width: 100vw;*/
     overflow: hidden;
-    background-image: linear-gradient(180deg, #F6F9FC 0%, #B0C6E1 45%, #508BBC 81%, #254061 100%);
-}
+/*    background-image: linear-gradient(180deg, #F6F9FC 0%, #B0C6E1 45%, #508BBC 81%, #254061 100%);
+*/}
 
 h1:focus {
     outline: none;

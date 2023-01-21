@@ -25,11 +25,8 @@
                     </BSCarouselItem>
                     break;
                 case BibleTextElement:
-                    <BSCarouselItem Interval="@SlideSettings.BibleTextInterval">                                      
-                        <div>
-                            <h1>@((element as BibleTextElement).BiblePassage)</h1>
-                            <h2>@((element as BibleTextElement).BibleText)</h2>
-                        </div> 
+                    <BSCarouselItem Interval="@SlideSettings.BibleTextInterval">
+                        <BibleVerseCard BibleTextElement=@(element as BibleTextElement)></BibleVerseCard>
                     </BSCarouselItem>
                     break;
             }                 

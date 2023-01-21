@@ -1,6 +1,4 @@
-﻿@*<section class="bibleversecard-header">
-    Heutiges Textwort
-</section>*@
+﻿@using hgSoftware.DomainServices.Models;
 
 <div class="bibleversecard_grid-container">
     <section class="bibleversecard">
@@ -8,13 +6,10 @@
             Bibelwort
         </p>
         <p class="bibleversecard_loc">
-            Lukas 10, 36.37
+            @BibleTextElement.BiblePassage
         </p>
         <p class="bibleversecard_text">
-            Wer von diesen dreien, meinst du, ist der Nächste geworden
-            dem, der unter die Räuber gefallen war? Er sprach:
-            Der die Barmherzigkeit an ihm tat. Da sprach Jesus zu ihm:
-            So geh hin und tu desgleichen!
+            @BibleTextElement.BibleText
         </p>
     </section>
 </div>
@@ -22,5 +17,6 @@
 
 
 @code {
-
+    [Parameter]
+    public BibleTextElement BibleTextElement { get; set; } = new BibleTextElement();
 }

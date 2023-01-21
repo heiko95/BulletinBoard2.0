@@ -34,7 +34,7 @@ namespace hgSoftware.Infrastructure.Repositories
             return _mapper.Map<BibleInfo>(events
                 .Where(x => x.Time.TimeOfDay >= time.ToTimeSpan())
                 .OrderBy(x => (x.Time.TimeOfDay - time.ToTimeSpan()).TotalMilliseconds)
-                .FirstOrDefault());
+                .FirstOrDefault() ?? events.Last());
         }
 
         public IList<PlannerEvent> GetEventsByDate(DateOnly date)

@@ -21,7 +21,7 @@ namespace hgSoftware.Infrastructure.Profiles
                                                                                               src.Time.Second)))
 
                     .ForMember(dest => dest.Date, opt => opt.Ignore())
-                    .ForMember(dest => dest.Description, opt => opt.MapFrom(src => string.Concat(src.EventDescription, " ", src.AdditionalInfo).Trim()))
+                    .ForMember(dest => dest.Description, opt => opt.MapFrom(src => string.Concat(src.EventDescription, " ", src.AdditionalInfo, " ", !string.IsNullOrEmpty(src.Person) ? string.Concat("durch ", src.Person) : string.Empty).Trim()))
                     .ForMember(dest => dest.Id, opt => opt.Ignore())
                     .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.Location));
 

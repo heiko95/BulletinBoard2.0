@@ -4,6 +4,7 @@
     {
         #region Public Fields
 
+        public const string BibleSettings = nameof(BibleSettings);
         public const string EventScreenSettings = nameof(EventScreenSettings);
         public const string ImageScreenSettings = nameof(ImageScreenSettings);
         public const string WelcomeScreenSettings = nameof(WelcomeScreenSettings);

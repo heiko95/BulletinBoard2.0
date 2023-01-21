@@ -1,12 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using hgSoftware.DomainServices.OutgoingPorts;
 
-namespace Infrastructure.Repositories
+namespace hgSoftware.Infrastructure.Repositories
 {
-    internal class BibleTextRepository
+    public class BibleTextRepository : IBibleTextRepository
     {
+        #region Private Fields
+
+        private readonly Context _context;
+
+        #endregion Private Fields
+
+        #region Public Constructors
+
+        public BibleTextRepository(Context context)
+        {
+            _context = context;
+        }
+
+        #endregion Public Constructors
+
+        #region Public Methods
+
+        public string GetBibleText(string book, int chapter, int verse)
+            => _context.BibleVerses.First(x => x.Book == book && x.Chapter == chapter && x.Verse == verse)?.Text ?? string.Empty;
+
+        #endregion Public Methods
     }
 }

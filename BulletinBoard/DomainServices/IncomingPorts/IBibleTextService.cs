@@ -6,7 +6,7 @@ namespace hgSoftware.DomainServices.IncomingPorts
     {
         #region Public Methods
 
-        BibleTextElement GetBibleElementOfToday();
+        BibleTextElement? GetBibleElementOfToday();
 
         #endregion Public Methods
     }

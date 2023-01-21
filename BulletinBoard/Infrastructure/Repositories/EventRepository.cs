@@ -2,7 +2,7 @@
 using hgSoftware.DomainServices.Models;
 using hgSoftware.DomainServices.OutgoingPorts;
 
-namespace Infrastructure.Repositories
+namespace hgSoftware.Infrastructure.Repositories
 {
     public class EventRepository : IEventRepository
     {
@@ -25,11 +25,11 @@ namespace Infrastructure.Repositories
 
         #region Public Methods
 
+        public BibleInfo GetBibleInfoByDate(int day, int month, int year)
+            => _mapper.Map<BibleInfo>(_context.Events.FirstOrDefault(e => e.Date.Day == day && e.Date.Month == month && e.Date.Year == year)) ?? new BibleInfo();
+
         public IList<PlannerEvent> GetEventsByDate(int day, int month, int year)
-        {
-            if (month < 1 || month > 12) return new List<PlannerEvent>();
-            return _mapper.Map<IList<PlannerEvent>>(_context.Events.Where(e => e.Date.Day >= day && e.Date.Month == month && e.Date.Year == year).ToList());
-        }
+                    => _mapper.Map<IList<PlannerEvent>>(_context.Events.Where(e => e.Date.Day >= day && e.Date.Month == month && e.Date.Year == year).ToList()) ?? new List<PlannerEvent>();
 
         #endregion Public Methods
     }

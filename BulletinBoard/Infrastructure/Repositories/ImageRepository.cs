@@ -2,7 +2,7 @@
 using hgSoftware.DomainServices.Models;
 using hgSoftware.DomainServices.OutgoingPorts;
 
-namespace Infrastructure.Repositories
+namespace hgSoftware.Infrastructure.Repositories
 {
     public class ImageRepository : IImageRepository
     {
@@ -25,9 +25,9 @@ namespace Infrastructure.Repositories
 
         #region Public Methods
 
-        public IList<ImageElement> GetImages()
+        public IList<ImageElement> GetImages(int maxCount)
         {
-            return _mapper.Map<IList<ImageElement>>(_context.Images);
+            return _mapper.Map<IList<ImageElement>>(_context.Images.Take(maxCount).ToList());
         }
 
         public ImageElement? GetWelcomeImage()

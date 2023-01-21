@@ -1,11 +1,12 @@
-﻿using Infrastructure.Models;
+﻿using hgSoftware.Infrastructure.Models;
 
-namespace Infrastructure
+namespace hgSoftware.Infrastructure
 {
     public class Context
     {
         #region Public Properties
 
+        public IList<BibleVerse> BibleVerses { get; set; } = new List<BibleVerse>();
         public IList<Event> Events { get; set; } = new List<Event>();
         public IList<Image> Images { get; set; } = new List<Image>();
         public Image? WelcomeImage { get; set; }

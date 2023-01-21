@@ -1,7 +1,7 @@
 ﻿using hgSoftware.DomainServices.OutgoingPorts;
-using Infrastructure.Models;
+using hgSoftware.Infrastructure.Models;
 
-namespace Infrastructure.FileReaders
+namespace hgSoftware.Infrastructure.FileReaders
 {
     public class WelcomeImageReader : IWelcomeImageReader
     {
@@ -24,7 +24,7 @@ namespace Infrastructure.FileReaders
 
         public void ReadImage(string filePath)
         {
-            if (!File.Exists(filePath)) throw new FileNotFoundException(nameof(filePath));
+            if (!File.Exists(filePath)) throw new FileNotFoundException(filePath);
 
             var imageArray = File.ReadAllBytes(filePath);
             var image = Convert.ToBase64String(imageArray);

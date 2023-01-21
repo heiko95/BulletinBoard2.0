@@ -1,6 +1,8 @@
 ﻿using hgSoftware.DomainServices.IncomingPorts;
 using hgSoftware.DomainServices.Models;
 using hgSoftware.DomainServices.OutgoingPorts;
+using hgSoftware.DomainServices.SettingModels;
+using Microsoft.Extensions.Options;
 
 namespace hgSoftware.DomainServices.Services
 {
@@ -8,14 +10,17 @@ namespace hgSoftware.DomainServices.Services
     {
         #region Private Fields
 
+        private readonly int _imageCount;
+
         private readonly IImageRepository _imageRepository;
 
         #endregion Private Fields
 
         #region Public Constructors
 
-        public ImageService(IImageRepository imageRepository)
+        public ImageService(IImageRepository imageRepository, IOptionsMonitor<ElementSettings> namedOptionsAccessor)
         {
+            _imageCount = namedOptionsAccessor.Get(ElementSettings.ImageScreenSettings).DisplayCount;
             _imageRepository = imageRepository;
         }
 
@@ -24,7 +29,7 @@ namespace hgSoftware.DomainServices.Services
         #region Public Methods
 
         public IList<ImageElement> GetPictures()
-            => _imageRepository.GetImages();
+            => _imageRepository.GetImages(_imageCount);
 
         #endregion Public Methods
     }

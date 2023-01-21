@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using hgSoftware.DomainServices.Models;
-using Infrastructure.Models;
+using hgSoftware.Infrastructure.Models;
 
-namespace Infrastructure.Profiles
+namespace hgSoftware.Infrastructure.Profiles
 {
     public class ImageToDomainProfile : Profile
     {

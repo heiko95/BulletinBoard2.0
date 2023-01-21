@@ -1,11 +1,11 @@
 ﻿using CsvHelper;
 using CsvHelper.Configuration;
 using hgSoftware.DomainServices.OutgoingPorts;
-using Infrastructure.Models;
+using hgSoftware.Infrastructure.Models;
 using System.Globalization;
 using System.Text;
 
-namespace Infrastructure.FileReaders
+namespace hgSoftware.Infrastructure.FileReaders
 {
     public class EventFileReader : IEventFileReader
     {
@@ -28,14 +28,14 @@ namespace Infrastructure.FileReaders
 
         public void ReadEvents(string filePath)
         {
-            if (!File.Exists(filePath)) throw new FileNotFoundException(nameof(filePath));
+            if (!File.Exists(filePath)) throw new FileNotFoundException(filePath);
             _context.Events.Clear();
 
             using var reader = new StreamReader(filePath);
             var configuration = new CsvConfiguration(new CultureInfo("de-DE"))
             {
-                Encoding = Encoding.UTF8, // Our file uses UTF-8 encoding.
-                Delimiter = ";", // The delimiter is a comma.
+                Encoding = Encoding.UTF8,
+                Delimiter = ";",
                 HasHeaderRecord = false
             };
 

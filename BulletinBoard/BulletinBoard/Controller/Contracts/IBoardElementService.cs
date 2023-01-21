@@ -1,4 +1,5 @@
 ﻿using hgSoftware.DomainServices.Models;
+using hgSoftware.DomainServices.SettingModels;
 
 namespace BulletinBoard.Services.Contracts
 {
@@ -7,6 +8,8 @@ namespace BulletinBoard.Services.Contracts
         #region Public Methods
 
         Task<IList<IElement>> GetCurrentElements();
+
+        SlideSettings GetSlideSettings();
 
         Task InitElements();
 

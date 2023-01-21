@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Models
+﻿namespace hgSoftware.Infrastructure.Models
 {
     public class Image
     {
@@ -18,6 +18,5 @@
         public string ImagePath { get; }
 
         #endregion Public Properties
-
     }
 }

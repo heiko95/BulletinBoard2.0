@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Models
+﻿namespace hgSoftware.Infrastructure.Models
 {
     public class Event
     {

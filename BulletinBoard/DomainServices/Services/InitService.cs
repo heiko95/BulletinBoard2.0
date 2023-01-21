@@ -1,6 +1,7 @@
 ﻿using hgSoftware.DomainServices.IncomingPorts;
 using hgSoftware.DomainServices.OutgoingPorts;
 using hgSoftware.DomainServices.SettingModels;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 namespace hgSoftware.DomainServices.Services
@@ -9,9 +10,12 @@ namespace hgSoftware.DomainServices.Services
     {
         #region Private Fields
 
+        private readonly IBibleFileReader _bibleFileReader;
         private readonly IEventFileReader _eventFileReader;
         private readonly IImageFilesReader _imageFilesReader;
+        private readonly ILogger<IInitService> _logger;
         private readonly IOptionsMonitor<ElementSettings> _namedOptionsAccessor;
+        private readonly IOptions<SlideSettings> _slideOptions;
         private readonly IWelcomeImageReader _welcomeImageReader;
 
         #endregion Private Fields
@@ -19,19 +23,30 @@ namespace hgSoftware.DomainServices.Services
         #region Public Constructors
 
         public InitService(IOptionsMonitor<ElementSettings> namedOptionsAccessor,
+                           IOptions<SlideSettings> slideOptions,
                            IImageFilesReader imageFilesReader,
                            IWelcomeImageReader welcomeImageReader,
-                           IEventFileReader eventFileReader)
+                           IEventFileReader eventFileReader,
+                           IBibleFileReader bibleFileReader,
+                           ILogger<IInitService> logger)
         {
             _namedOptionsAccessor = namedOptionsAccessor;
+            _slideOptions = slideOptions;
             _imageFilesReader = imageFilesReader;
             _welcomeImageReader = welcomeImageReader;
             _eventFileReader = eventFileReader;
+            _bibleFileReader = bibleFileReader;
+            _logger = logger;
         }
 
         #endregion Public Constructors
 
         #region Public Methods
+
+        public SlideSettings GetSlideSettings()
+        {
+            return _slideOptions.Value;
+        }
 
         public async Task InitializeBulletinBoard()
         {
@@ -43,6 +58,7 @@ namespace hgSoftware.DomainServices.Services
             CreateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.EventScreenSettings).FolderName));
             CreateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.ImageScreenSettings).FolderName));
             CreateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.WelcomeScreenSettings).FolderName));
+            CreateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.BibleSettings).FolderName));
 
             await UpdateDirectory(appDataFolder);
 
@@ -57,7 +73,11 @@ namespace hgSoftware.DomainServices.Services
             var imageTask = Task.Run(() => TryToReadFile(_imageFilesReader.ReadImages, Path.Combine(appDataFolder,
                                                     _namedOptionsAccessor.Get(ElementSettings.ImageScreenSettings).FolderName)));
 
-            await Task.WhenAll(welcomeTask, plannerTask, imageTask);
+            var bibleTask = Task.Run(() => TryToReadFile(_bibleFileReader.ReadBible, Path.Combine(appDataFolder,
+                                                   _namedOptionsAccessor.Get(ElementSettings.BibleSettings).FolderName,
+                                                   _namedOptionsAccessor.Get(ElementSettings.BibleSettings).FileName)));
+
+            await Task.WhenAll(welcomeTask, plannerTask, imageTask, bibleTask);
         }
 
         #endregion Public Methods
@@ -78,11 +98,11 @@ namespace hgSoftware.DomainServices.Services
             }
             catch (FileNotFoundException fex)
             {
-                // TODO add info to Log File
+                _logger.LogWarning(fex, "File not Found: {file}", fex.Message);
             }
             catch (DirectoryNotFoundException dex)
             {
-                // TODO add info to Log File
+                _logger.LogWarning(dex, "Directory not Found: {dict}", dex.Message);
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿using hgSoftware.DomainServices.OutgoingPorts;
-using Infrastructure.Models;
+using hgSoftware.Infrastructure.Models;
 
-namespace Infrastructure.FileReaders
+namespace hgSoftware.Infrastructure.FileReaders
 {
     public class ImageFilesReader : IImageFilesReader
     {
@@ -24,7 +24,7 @@ namespace Infrastructure.FileReaders
 
         public void ReadImages(string folderpath)
         {
-            if (!Directory.Exists(folderpath)) throw new DirectoryNotFoundException(nameof(folderpath));
+            if (!Directory.Exists(folderpath)) throw new DirectoryNotFoundException(folderpath);
 
             _context.Images.Clear();
 

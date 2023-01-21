@@ -6,7 +6,7 @@ namespace hgSoftware.DomainServices.IncomingPorts
     {
         #region Public Methods
 
-        PlannerElement GetPlanner();
+        PlannerElement? GetPlanner();
 
         #endregion Public Methods
     }

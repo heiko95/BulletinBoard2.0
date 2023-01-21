@@ -6,12 +6,12 @@
 
 .planner {
     display: grid;
-/*    grid-template-columns: [first] auto [end]*/;
+    /*    grid-template-columns: [first] auto [end];*/
     /*grid-template-rows: auto;*/
     /*align-items: center;*/
     /*justify-items: center;*/
     /*background-color: aqua;*/
-/*    height: 50vh;
+    /*    height: 50vh;
     width: 100vw;*/
     /*background-image: linear-gradient(180deg, white 0%, #a3bfe4 45%, #7ca6d8 81%, #5793C9 100%);*/
 }
@@ -108,14 +108,75 @@ font-size: 40px;
 }
 
 
+.bibleversecard_grid-container {
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-rows: 10vw auto 10vw;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: 120vw 120vh;
+    background-image: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.85) 32.9%, rgba(64, 118, 130, 0.85) 33.15%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%), url("../css/assets/bible.jpg");
+}
+
+.bibleversecard {
+    display: grid;
+    position: absolute;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 70vw;
+    background-color: rgba(255,255,255,1);
+    padding: 80px 100px 80px 100px;
+    filter: drop-shadow(5px 5px 30px black);
+    border-radius: 50px;
+}
+
+.bibleversecard-header {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: left;
+    /*padding-bottom: 70px;*/
+    /*text-transform: uppercase;*/
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.bibleversecard_loc {
+    font-size: 2.1rem;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+.bibleversecard_text {
+    font-size: 2.5rem;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.bibleversecard_text::before {
+    content: "";
+    display: block;
+    width: 8rem;
+    height: 0.25rem;
+    margin-left: 0;
+    margin-bottom: 2rem;
+    background-color: #254061;
+}    
+
+
+
+
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica', Helvetica, Arial, sans-serif;
 }
 
 body {
-   /* height: 100vh;
+    /* height: 100vh;
     width: 100vw;*/
     overflow: hidden;
+    background-image: linear-gradient(180deg, #F6F9FC 0%, #B0C6E1 45%, #508BBC 81%, #254061 100%);
 }
 
 h1:focus {

@@ -34,9 +34,9 @@ namespace hgSoftware.DomainServices.Services
 
             var currentMonthDate = DateTime.Now;
             var nextMonthData = currentMonthDate.AddMonths(1);
-            var currentMonth = new PlannerSection(CreateMonth(currentMonthDate.Day, currentMonthDate.Month, currentMonthDate.Year, _eventCount), month: currentMonthDate.ToString("MMMM", new CultureInfo("de-DE")));
+            var currentMonth = new PlannerSection(CreateMonth(new DateOnly(currentMonthDate.Year, currentMonthDate.Month, currentMonthDate.Day), _eventCount), month: currentMonthDate.ToString("MMMM", new CultureInfo("de-DE")));
             var nextMonthEventCount = _eventCount - currentMonth.Events.Count;
-            var followingMonth = new PlannerSection(CreateMonth(1, nextMonthData.Month, nextMonthData.Year, nextMonthEventCount), month: nextMonthData.ToString("MMMM", new CultureInfo("de-DE")));
+            var followingMonth = new PlannerSection(CreateMonth(new DateOnly(nextMonthData.Year, nextMonthData.Month, 1), nextMonthEventCount), month: nextMonthData.ToString("MMMM", new CultureInfo("de-DE")));
 
             if (currentMonth.Events.Count > 0) plannerElement.AddPlannerSection(currentMonth);
             if (followingMonth.Events.Count > 0) plannerElement.AddPlannerSection(followingMonth);
@@ -49,9 +49,9 @@ namespace hgSoftware.DomainServices.Services
 
         #region Private Methods
 
-        private IList<PlannerEvent> CreateMonth(int day, int month, int year, int count)
+        private IList<PlannerEvent> CreateMonth(DateOnly date, int count)
         {
-            var eventElements = _eventRepository.GetEventsByDate(day, month, year).OrderBy(e => e.DateTime).GroupBy(e => e.DateTime.Day).ToList();
+            var eventElements = _eventRepository.GetEventsByDate(date).OrderBy(e => e.DateTime).GroupBy(e => e.DateTime.Day).ToList();
             var result = new List<PlannerEvent>();
             var elementCount = count;
 

@@ -2457,3 +2457,831 @@ System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7
 2023-01-21 14:20:14.346 +01:00 [INF] Initialisation done
 2023-01-21 14:20:14.349 +01:00 [INF] Load Elements
 2023-01-21 14:20:14.402 +01:00 [INF] Load Elements done
+2023-01-21 14:27:24.817 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 14:27:25.306 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 14:27:25.321 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 14:27:25.325 +01:00 [INF] Hosting environment: Development
+2023-01-21 14:27:25.374 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 14:27:26.522 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 14:27:26.594 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 14:27:26.628 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 14:27:26.650 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 14:27:26.654 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 14:27:27.086 +01:00 [INF] Executed page /_Host in 451.6658ms
+2023-01-21 14:27:27.088 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 14:27:27.143 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 624.9483ms
+2023-01-21 14:27:27.184 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 14:27:27.194 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 14:27:27.194 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 10.9405ms
+2023-01-21 14:27:27.197 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 14:27:27.197 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 14:27:27.205 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 14:27:27.210 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 4.7170ms
+2023-01-21 14:27:27.223 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 14:27:27.223 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 14:27:27.224 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 27.0783ms
+2023-01-21 14:27:27.224 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 30.0428ms
+2023-01-21 14:27:27.226 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 14:27:27.227 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 0.3709ms
+2023-01-21 14:27:27.227 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 14:27:27.228 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 14:27:27.228 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 0.3645ms
+2023-01-21 14:27:27.231 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 14:27:27.232 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 14:27:27.232 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 0.5375ms
+2023-01-21 14:27:27.237 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 14:27:27.238 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 40.9713ms
+2023-01-21 14:27:27.241 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 14:27:27.241 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 14:27:27.241 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.2976ms
+2023-01-21 14:27:27.268 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 14:27:27.270 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 14:27:27.273 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 14:27:27.274 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 5.3426ms
+2023-01-21 14:27:27.351 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 14:27:27.353 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 14:27:27.381 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 14:27:27.381 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 30.4150ms
+2023-01-21 14:27:27.429 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=xb99t9SoiMmqoKCR8f1Ymg - -
+2023-01-21 14:27:27.430 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 14:27:27.868 +01:00 [INF] Start Initialisation
+2023-01-21 14:27:29.056 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 14:27:29.210 +01:00 [INF] Initialisation done
+2023-01-21 14:27:29.217 +01:00 [INF] Load Elements
+2023-01-21 14:27:29.276 +01:00 [INF] Load Elements done
+2023-01-21 14:28:03.270 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundary4hdPJs3LIj59qNMZ 359
+2023-01-21 14:28:03.271 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 14:28:03.350 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 14:28:03.350 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundary4hdPJs3LIj59qNMZ 359 - 200 0 - 80.4165ms
+2023-01-21 14:28:03.372 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 14:28:03.372 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=xb99t9SoiMmqoKCR8f1Ymg - - - 101 - - 35942.7777ms
+2023-01-21 14:28:20.587 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 14:28:20.964 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 14:28:20.973 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 14:28:20.976 +01:00 [INF] Hosting environment: Development
+2023-01-21 14:28:20.977 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 14:28:21.746 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 14:28:21.835 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 14:28:21.892 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 14:28:21.922 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 14:28:21.925 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 14:28:22.323 +01:00 [INF] Executed page /_Host in 423.1676ms
+2023-01-21 14:28:22.324 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 14:28:22.388 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 647.5830ms
+2023-01-21 14:28:22.401 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 14:28:22.409 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 14:28:22.411 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 14:28:22.413 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 11.8484ms
+2023-01-21 14:28:22.415 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 14:28:22.419 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 14:28:22.423 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 4.0642ms
+2023-01-21 14:28:22.433 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 14:28:22.433 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 14:28:22.433 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 14:28:22.434 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 14:28:22.434 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 14:28:22.434 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 25.2469ms
+2023-01-21 14:28:22.434 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 18.7873ms
+2023-01-21 14:28:22.438 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 26.9222ms
+2023-01-21 14:28:22.438 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 4.0360ms
+2023-01-21 14:28:22.443 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 14:28:22.443 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 14:28:22.444 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 9.7506ms
+2023-01-21 14:28:22.446 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 14:28:22.447 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 3.1389ms
+2023-01-21 14:28:22.464 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 14:28:22.465 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 14:28:22.465 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.3750ms
+2023-01-21 14:28:22.484 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 14:28:22.485 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 14:28:22.500 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 14:28:22.500 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 16.4334ms
+2023-01-21 14:28:22.534 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 14:28:22.535 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 14:28:22.550 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 14:28:22.550 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 16.0782ms
+2023-01-21 14:28:22.582 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=3kV45K1WRwob6HXEEHd5dw - -
+2023-01-21 14:28:22.582 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 14:28:23.077 +01:00 [INF] Start Initialisation
+2023-01-21 14:28:24.941 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 14:28:25.289 +01:00 [INF] Initialisation done
+2023-01-21 14:28:25.293 +01:00 [INF] Load Elements
+2023-01-21 14:28:25.345 +01:00 [INF] Load Elements done
+2023-01-21 14:28:43.300 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundarygEDzdj3l2bSp9bxB 359
+2023-01-21 14:28:43.300 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 14:28:43.334 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 14:28:43.334 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=3kV45K1WRwob6HXEEHd5dw - - - 101 - - 20751.9064ms
+2023-01-21 14:28:43.342 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 14:28:43.343 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundarygEDzdj3l2bSp9bxB 359 - 200 0 - 44.5881ms
+2023-01-21 14:29:24.504 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 14:29:24.836 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 14:29:24.848 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 14:29:24.851 +01:00 [INF] Hosting environment: Development
+2023-01-21 14:29:24.854 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 14:29:25.877 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 14:29:25.953 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 14:29:26.001 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 14:29:26.024 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 14:29:26.027 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 14:29:26.326 +01:00 [INF] Executed page /_Host in 318.8216ms
+2023-01-21 14:29:26.327 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 14:29:26.369 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 496.1468ms
+2023-01-21 14:29:26.420 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 14:29:26.422 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 14:29:26.426 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 3.5743ms
+2023-01-21 14:29:26.447 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 14:29:26.448 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 14:29:26.449 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 14:29:26.455 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 14:29:26.455 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 6.8196ms
+2023-01-21 14:29:26.455 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 0.6114ms
+2023-01-21 14:29:26.456 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 14:29:26.457 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 14:29:26.458 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 14:29:26.457 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 14:29:26.457 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 14:29:26.458 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 37.9669ms
+2023-01-21 14:29:26.458 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 2.0957ms
+2023-01-21 14:29:26.459 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 12.0385ms
+2023-01-21 14:29:26.467 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 14:29:26.468 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 14:29:26.468 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 0.3405ms
+2023-01-21 14:29:26.470 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 18.8733ms
+2023-01-21 14:29:26.474 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 14:29:26.474 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 14:29:26.474 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.3315ms
+2023-01-21 14:29:26.501 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 14:29:26.502 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 14:29:26.506 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 14:29:26.507 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 5.7633ms
+2023-01-21 14:29:26.573 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 14:29:26.574 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 14:29:26.589 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 14:29:26.589 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 16.3730ms
+2023-01-21 14:29:26.648 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=6YiiO8ZpCggGAAQ3BTDUfQ - -
+2023-01-21 14:29:26.648 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 14:29:26.989 +01:00 [INF] Start Initialisation
+2023-01-21 14:29:28.066 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 14:29:28.150 +01:00 [INF] Initialisation done
+2023-01-21 14:29:28.153 +01:00 [INF] Load Elements
+2023-01-21 14:29:28.203 +01:00 [INF] Load Elements done
+2023-01-21 14:30:00.700 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 14:30:01.007 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 14:30:01.016 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 14:30:01.019 +01:00 [INF] Hosting environment: Development
+2023-01-21 14:30:01.021 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 14:30:02.476 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 14:30:02.592 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 14:30:02.714 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 14:30:02.733 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 14:30:02.736 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 14:30:03.574 +01:00 [INF] Executed page /_Host in 854.3168ms
+2023-01-21 14:30:03.576 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 14:30:03.674 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 1203.6625ms
+2023-01-21 14:30:03.878 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 14:30:03.899 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 14:30:03.908 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 14:30:03.908 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 14:30:03.913 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 5.1467ms
+2023-01-21 14:30:03.920 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 14:30:03.920 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 14:30:03.920 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 12.6310ms
+2023-01-21 14:30:03.921 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 14:30:03.921 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 43.1582ms
+2023-01-21 14:30:03.921 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 14:30:03.922 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 0.4731ms
+2023-01-21 14:30:03.936 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 14:30:03.936 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 14.6402ms
+2023-01-21 14:30:03.947 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 14:30:03.947 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 14:30:03.947 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 0.3124ms
+2023-01-21 14:30:03.947 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 14:30:03.947 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 14:30:03.948 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 0.1829ms
+2023-01-21 14:30:03.951 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 14:30:03.951 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 14:30:03.951 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.2973ms
+2023-01-21 14:30:03.952 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 52.0918ms
+2023-01-21 14:30:04.117 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 14:30:04.203 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 14:30:04.215 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 14:30:04.215 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 98.4542ms
+2023-01-21 14:30:04.294 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 14:30:04.296 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 14:30:04.322 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 14:30:04.322 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 28.0821ms
+2023-01-21 14:30:04.333 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=QqTYPvj47nuWcqkHN3nq0Q - -
+2023-01-21 14:30:04.333 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 14:30:05.587 +01:00 [INF] Start Initialisation
+2023-01-21 14:30:06.697 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 14:30:06.775 +01:00 [INF] Initialisation done
+2023-01-21 14:30:06.779 +01:00 [INF] Load Elements
+2023-01-21 14:30:06.829 +01:00 [INF] Load Elements done
+2023-01-21 14:30:19.585 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryCDrEdBtZA9d1zAAH 359
+2023-01-21 14:30:19.585 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 14:30:19.637 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 14:30:19.637 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryCDrEdBtZA9d1zAAH 359 - 200 0 - 52.0839ms
+2023-01-21 14:30:19.668 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 14:30:19.668 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=QqTYPvj47nuWcqkHN3nq0Q - - - 101 - - 15334.7874ms
+2023-01-21 14:30:45.890 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 14:30:46.215 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 14:30:46.223 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 14:30:46.225 +01:00 [INF] Hosting environment: Development
+2023-01-21 14:30:46.227 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 14:30:46.929 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 14:30:47.009 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 14:30:47.039 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 14:30:47.067 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 14:30:47.071 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 14:30:47.391 +01:00 [INF] Executed page /_Host in 346.9738ms
+2023-01-21 14:30:47.393 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 14:30:47.431 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 510.5566ms
+2023-01-21 14:30:47.452 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 14:30:47.468 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 14:30:47.468 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 14:30:47.477 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 14:30:47.477 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 14:30:47.483 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 31.5350ms
+2023-01-21 14:30:47.488 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 14:30:47.489 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 1.7462ms
+2023-01-21 14:30:47.505 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 14:30:47.505 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 14:30:47.505 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 14:30:47.505 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 37.2558ms
+2023-01-21 14:30:47.505 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 28.3951ms
+2023-01-21 14:30:47.509 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 29.9912ms
+2023-01-21 14:30:47.509 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 14:30:47.510 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 14:30:47.510 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 41.5059ms
+2023-01-21 14:30:47.529 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 14:30:47.530 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 14:30:47.530 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 0.3032ms
+2023-01-21 14:30:47.530 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 14:30:47.530 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 14:30:47.530 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.1844ms
+2023-01-21 14:30:47.534 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 24.6871ms
+2023-01-21 14:30:47.554 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 14:30:47.559 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 14:30:47.564 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 14:30:47.564 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 10.5215ms
+2023-01-21 14:30:47.608 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 14:30:47.609 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 14:30:47.623 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 14:30:47.623 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 15.3094ms
+2023-01-21 14:30:47.649 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=NOHZT3ZsNuTIntLgdoeh5g - -
+2023-01-21 14:30:47.650 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 14:30:48.076 +01:00 [INF] Start Initialisation
+2023-01-21 14:30:49.201 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 14:30:49.272 +01:00 [INF] Initialisation done
+2023-01-21 14:30:49.275 +01:00 [INF] Load Elements
+2023-01-21 14:30:49.324 +01:00 [INF] Load Elements done
+2023-01-21 14:31:25.020 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundary4MASjRlAl3WUpa0c 359
+2023-01-21 14:31:25.020 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 14:31:25.227 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 14:31:25.227 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=NOHZT3ZsNuTIntLgdoeh5g - - - 101 - - 37577.5050ms
+2023-01-21 14:31:25.274 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 14:31:25.274 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundary4MASjRlAl3WUpa0c 359 - 200 0 - 253.6529ms
+2023-01-21 14:59:24.624 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 14:59:25.198 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 14:59:25.573 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 14:59:25.589 +01:00 [INF] Hosting environment: Development
+2023-01-21 14:59:25.591 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 14:59:26.018 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 14:59:26.104 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 14:59:26.161 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 14:59:26.189 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 14:59:26.191 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 14:59:26.525 +01:00 [INF] Executed page /_Host in 358.2056ms
+2023-01-21 14:59:26.527 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 14:59:26.601 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 587.7785ms
+2023-01-21 14:59:26.641 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 14:59:26.645 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 14:59:26.651 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 14:59:26.675 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 14:59:26.678 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 32.4705ms
+2023-01-21 14:59:26.678 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 14:59:26.680 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 4.8165ms
+2023-01-21 14:59:26.681 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 2.5802ms
+2023-01-21 14:59:26.682 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 14:59:26.694 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 14:59:26.694 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 14:59:26.694 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 14:59:26.695 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 43.2538ms
+2023-01-21 14:59:26.695 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 53.4115ms
+2023-01-21 14:59:26.696 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 14.5429ms
+2023-01-21 14:59:26.698 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 14:59:26.699 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 14:59:26.699 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 0.7655ms
+2023-01-21 14:59:26.702 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 14:59:26.703 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 14:59:26.703 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 0.5816ms
+2023-01-21 14:59:26.712 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 14:59:26.712 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 14:59:26.713 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.5326ms
+2023-01-21 14:59:26.736 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 14:59:26.745 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 14:59:26.749 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 14:59:26.749 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 13.6731ms
+2023-01-21 14:59:26.840 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 14:59:26.841 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 14:59:26.861 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 14:59:26.861 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 21.0964ms
+2023-01-21 14:59:26.909 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=OmdcHDPteuotu4JZufTgiA - -
+2023-01-21 14:59:26.909 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 14:59:27.279 +01:00 [INF] Start Initialisation
+2023-01-21 14:59:28.390 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 14:59:28.484 +01:00 [INF] Initialisation done
+2023-01-21 14:59:28.487 +01:00 [INF] Load Elements
+2023-01-21 15:00:12.210 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 15:00:12.210 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 15:00:12.210 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 15:00:12.210 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 0.7264ms
+2023-01-21 15:00:12.235 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=yoZFUKsRRZht5U8VaPAdGA - -
+2023-01-21 15:00:12.236 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 15:00:12.375 +01:00 [WRN] Unhandled exception rendering component: Year, Month, and Day parameters describe an un-representable DateTime.
+System.ArgumentOutOfRangeException: Year, Month, and Day parameters describe an un-representable DateTime.
+   at System.DateOnly..ctor(Int32 year, Int32 month, Int32 day)
+   at hgSoftware.DomainServices.Services.PlannerService.GetPlanner() in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\PlannerService.cs:line 39
+   at BulletinBoard.Services.BoardElementService.<GetCurrentElements>b__7_0() in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\Controller\BoardElementService.cs:line 50
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at BulletinBoard.Services.BoardElementService.GetCurrentElements() in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\Controller\BoardElementService.cs:line 45
+   at BulletinBoard.Pages.Index.OnParametersSetAsync() in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\Pages\Index.razor:line 56
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+2023-01-21 15:00:12.390 +01:00 [ERR] Unhandled exception in circuit 'Et0ChXiseVukhpagIn9wOt5n80S2evvwKW3E1OmGHns'.
+System.ArgumentOutOfRangeException: Year, Month, and Day parameters describe an un-representable DateTime.
+   at System.DateOnly..ctor(Int32 year, Int32 month, Int32 day)
+   at hgSoftware.DomainServices.Services.PlannerService.GetPlanner() in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\PlannerService.cs:line 39
+   at BulletinBoard.Services.BoardElementService.<GetCurrentElements>b__7_0() in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\Controller\BoardElementService.cs:line 50
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at BulletinBoard.Services.BoardElementService.GetCurrentElements() in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\Controller\BoardElementService.cs:line 45
+   at BulletinBoard.Pages.Index.OnParametersSetAsync() in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\Pages\Index.razor:line 56
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+2023-01-21 15:00:12.462 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 15:00:12.462 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=OmdcHDPteuotu4JZufTgiA - - - 101 - - 45553.1646ms
+2023-01-21 15:00:12.466 +01:00 [ERR] Failed to invoke hub method 'ConnectCircuit'.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.Server.Circuits.CircuitHost.SetCircuitUser(ClaimsPrincipal user)
+   at Microsoft.AspNetCore.Components.Server.ComponentHub.ConnectCircuit(String circuitIdSecret)
+   at lambda_method11(Closure , Object )
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.ExecuteMethod(ObjectMethodExecutor methodExecutor, Hub hub, Object[] arguments)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.<Invoke>g__ExecuteInvocation|16_0(DefaultHubDispatcher`1 dispatcher, ObjectMethodExecutor methodExecutor, THub hub, Object[] arguments, AsyncServiceScope scope, IHubActivator`1 hubActivator, HubConnectionContext connection, HubMethodInvocationMessage hubMethodInvocationMessage, Boolean isStreamCall)
+2023-01-21 15:00:12.468 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 15:00:12.468 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=yoZFUKsRRZht5U8VaPAdGA - - - 101 - - 233.0931ms
+2023-01-21 15:00:15.989 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryEMEsQk8D5iGCVNAt 359
+2023-01-21 15:00:15.989 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 15:00:16.041 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 15:00:16.041 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryEMEsQk8D5iGCVNAt 359 - 200 0 - 51.9663ms
+2023-01-21 15:00:56.437 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 15:00:56.916 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 15:00:56.936 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 15:00:56.963 +01:00 [INF] Hosting environment: Development
+2023-01-21 15:00:56.971 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 15:00:58.053 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 15:00:58.225 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 15:00:58.268 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 15:00:58.291 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 15:00:58.300 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 15:00:58.756 +01:00 [INF] Executed page /_Host in 482.3536ms
+2023-01-21 15:00:58.758 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 15:00:58.835 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 786.0189ms
+2023-01-21 15:00:58.900 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 15:00:58.900 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 15:00:58.901 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 15:00:58.901 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 15:00:58.915 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 15.9009ms
+2023-01-21 15:00:58.915 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 15.9006ms
+2023-01-21 15:00:58.920 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 15:00:58.924 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 3.8867ms
+2023-01-21 15:00:58.933 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 15:00:58.933 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 15:00:58.934 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 32.9224ms
+2023-01-21 15:00:58.937 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 15:00:58.937 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 35.9448ms
+2023-01-21 15:00:58.937 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 15:00:58.938 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 0.5264ms
+2023-01-21 15:00:58.967 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 15:00:58.968 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 15:00:58.968 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 15:00:58.968 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 0.3263ms
+2023-01-21 15:00:58.968 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 15:00:58.968 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 15:00:58.968 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 0.2248ms
+2023-01-21 15:00:58.968 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 15:00:58.968 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.2157ms
+2023-01-21 15:00:58.998 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 15:00:59.157 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 15:00:59.204 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 15:00:59.204 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 205.7859ms
+2023-01-21 15:00:59.249 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 15:00:59.251 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 15:00:59.268 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 15:00:59.268 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 19.5991ms
+2023-01-21 15:00:59.280 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=-F3rpPeLUTMjcoGXK7VFiQ - -
+2023-01-21 15:00:59.280 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 15:00:59.750 +01:00 [INF] Start Initialisation
+2023-01-21 15:01:00.880 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 15:01:00.981 +01:00 [INF] Initialisation done
+2023-01-21 15:01:00.985 +01:00 [INF] Load Elements
+2023-01-21 15:02:28.532 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 15:02:28.837 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 15:02:28.845 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 15:02:28.847 +01:00 [INF] Hosting environment: Development
+2023-01-21 15:02:28.849 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 15:02:29.879 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 15:02:30.040 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 15:02:30.071 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 15:02:30.092 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 15:02:30.097 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 15:02:30.472 +01:00 [INF] Executed page /_Host in 395.4966ms
+2023-01-21 15:02:30.473 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 15:02:30.528 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 654.2686ms
+2023-01-21 15:02:30.568 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 15:02:30.568 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 15:02:30.571 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 3.3363ms
+2023-01-21 15:02:30.574 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 15:02:30.574 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 15:02:30.588 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 15:02:30.594 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 13.0260ms
+2023-01-21 15:02:30.597 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 15:02:30.598 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 1.1273ms
+2023-01-21 15:02:30.602 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 15:02:30.602 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 15:02:30.602 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 15:02:30.602 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 15:02:30.602 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 15:02:30.603 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 29.4706ms
+2023-01-21 15:02:30.603 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 35.2729ms
+2023-01-21 15:02:30.603 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 29.4769ms
+2023-01-21 15:02:30.606 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 15:02:30.606 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 15:02:30.606 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 4.3857ms
+2023-01-21 15:02:30.606 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 7.1171ms
+2023-01-21 15:02:30.620 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 15:02:30.620 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 15:02:30.620 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.4705ms
+2023-01-21 15:02:30.641 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 15:02:30.642 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 15:02:30.650 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 15:02:30.650 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 9.6685ms
+2023-01-21 15:02:30.737 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 15:02:30.739 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 15:02:30.758 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 15:02:30.758 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 21.4197ms
+2023-01-21 15:02:30.830 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=BBvAjSXqIqCUkuEToCJ1qA - -
+2023-01-21 15:02:30.830 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 15:02:31.226 +01:00 [INF] Start Initialisation
+2023-01-21 15:02:32.358 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 15:02:32.428 +01:00 [INF] Initialisation done
+2023-01-21 15:02:32.432 +01:00 [INF] Load Elements
+2023-01-21 15:02:32.474 +01:00 [INF] Load Elements done
+2023-01-21 15:02:43.268 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundarygeGsalm0zwwFIbVB 359
+2023-01-21 15:02:43.269 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 15:02:43.346 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 15:02:43.347 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=BBvAjSXqIqCUkuEToCJ1qA - - - 101 - - 12516.3480ms
+2023-01-21 15:02:43.361 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 15:02:43.361 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundarygeGsalm0zwwFIbVB 359 - 200 0 - 92.4233ms
+2023-01-21 15:04:30.113 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 15:04:31.463 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 15:04:31.474 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 15:04:31.491 +01:00 [INF] Hosting environment: Development
+2023-01-21 15:04:31.510 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 15:04:32.992 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 15:04:33.084 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 15:04:33.114 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 15:04:33.147 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 15:04:33.149 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 15:04:33.503 +01:00 [INF] Executed page /_Host in 381.6345ms
+2023-01-21 15:04:33.505 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 15:04:33.550 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 567.7445ms
+2023-01-21 15:04:33.658 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 15:04:33.667 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 15:04:33.668 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 15:04:33.668 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 15:04:33.671 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 3.2995ms
+2023-01-21 15:04:33.673 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 6.4235ms
+2023-01-21 15:04:33.675 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 6.8073ms
+2023-01-21 15:04:33.676 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 15:04:33.695 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 15:04:33.696 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 15:04:33.696 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 15:04:33.696 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 19.7049ms
+2023-01-21 15:04:33.701 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 15:04:33.703 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 7.2973ms
+2023-01-21 15:04:33.703 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 45.6560ms
+2023-01-21 15:04:33.718 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 15:04:33.719 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 15:04:33.719 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 0.3210ms
+2023-01-21 15:04:33.724 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 15:04:33.724 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 15:04:33.725 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 15:04:33.725 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 3.0541ms
+2023-01-21 15:04:33.736 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 15:04:33.736 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 11.5346ms
+2023-01-21 15:04:33.748 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 15:04:33.753 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 15:04:33.762 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 15:04:33.762 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 14.1146ms
+2023-01-21 15:04:33.833 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 15:04:33.834 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 15:04:33.856 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 15:04:33.857 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 23.1362ms
+2023-01-21 15:04:33.882 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=WouzwgibL6rYhopLmV1cng - -
+2023-01-21 15:04:33.882 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 15:04:34.398 +01:00 [INF] Start Initialisation
+2023-01-21 15:04:35.533 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 15:04:35.600 +01:00 [INF] Initialisation done
+2023-01-21 15:04:35.604 +01:00 [INF] Load Elements
+2023-01-21 15:04:35.645 +01:00 [INF] Load Elements done
+2023-01-21 15:04:43.401 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryQj7FSJAv1qZmmD3P 359
+2023-01-21 15:04:43.401 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 15:04:43.470 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 15:04:43.470 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=WouzwgibL6rYhopLmV1cng - - - 101 - - 9588.0567ms
+2023-01-21 15:04:43.504 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 15:04:43.505 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryQj7FSJAv1qZmmD3P 359 - 200 0 - 103.4356ms
+2023-01-21 15:06:43.365 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 15:06:43.621 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 15:06:43.630 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 15:06:43.632 +01:00 [INF] Hosting environment: Development
+2023-01-21 15:06:43.633 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 15:06:45.004 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 15:06:45.089 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 15:06:45.120 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 15:06:45.155 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 15:06:45.163 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 15:06:46.319 +01:00 [INF] Executed page /_Host in 1160.9718ms
+2023-01-21 15:06:46.330 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 15:06:46.445 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 1445.0895ms
+2023-01-21 15:06:46.581 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 15:06:46.581 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 15:06:46.581 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 15:06:46.596 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 15:06:46.602 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 15:06:46.605 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 15:06:46.607 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 25.9054ms
+2023-01-21 15:06:46.610 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 8.3568ms
+2023-01-21 15:06:46.612 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 30.3877ms
+2023-01-21 15:06:46.615 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 15:06:46.624 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 15:06:46.625 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 44.0087ms
+2023-01-21 15:06:46.625 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 15:06:46.630 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 15:06:46.624 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 15:06:46.630 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 15:06:46.631 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 15.2445ms
+2023-01-21 15:06:46.631 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 5.0928ms
+2023-01-21 15:06:46.631 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 34.6179ms
+2023-01-21 15:06:46.795 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 15:06:46.795 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 15:06:46.796 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.4924ms
+2023-01-21 15:06:46.630 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 15:06:46.797 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 192.0923ms
+2023-01-21 15:06:46.831 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 15:06:46.837 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 15:06:46.841 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 15:06:46.841 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 9.9297ms
+2023-01-21 15:06:46.920 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 15:06:46.922 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 15:06:46.938 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 15:06:46.939 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 18.5092ms
+2023-01-21 15:06:46.949 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=zJWQL3ia_G-W40ZNbdD1ug - -
+2023-01-21 15:06:46.950 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 15:06:47.600 +01:00 [INF] Start Initialisation
+2023-01-21 15:06:48.735 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 15:06:48.816 +01:00 [INF] Initialisation done
+2023-01-21 15:06:48.819 +01:00 [INF] Load Elements
+2023-01-21 15:06:48.861 +01:00 [INF] Load Elements done
+2023-01-21 15:06:56.186 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryFPvI2FpFzSB8ws7g 359
+2023-01-21 15:06:56.186 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 15:06:56.236 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 15:06:56.236 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryFPvI2FpFzSB8ws7g 359 - 200 0 - 50.2975ms
+2023-01-21 15:06:56.236 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 15:06:56.236 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=zJWQL3ia_G-W40ZNbdD1ug - - - 101 - - 9286.8500ms
+2023-01-21 15:07:14.057 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 15:07:14.470 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 15:07:14.481 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 15:07:14.529 +01:00 [INF] Hosting environment: Development
+2023-01-21 15:07:14.533 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 15:07:15.752 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 15:07:15.849 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 15:07:15.894 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 15:07:15.919 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 15:07:15.922 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 15:07:16.539 +01:00 [INF] Executed page /_Host in 636.4072ms
+2023-01-21 15:07:16.541 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 15:07:16.594 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 847.0673ms
+2023-01-21 15:07:16.675 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 15:07:16.677 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 15:07:16.681 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 15:07:16.682 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 15:07:16.691 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 15:07:16.691 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 15:07:16.691 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 10.0639ms
+2023-01-21 15:07:16.695 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 3.8559ms
+2023-01-21 15:07:16.696 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 13.2002ms
+2023-01-21 15:07:16.709 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 15:07:16.711 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 15:07:16.711 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 15:07:16.711 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 15:07:16.711 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 15:07:16.711 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 2.0374ms
+2023-01-21 15:07:16.711 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 36.3533ms
+2023-01-21 15:07:16.711 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 34.0967ms
+2023-01-21 15:07:16.715 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 15:07:16.715 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 15:07:16.715 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 0.3490ms
+2023-01-21 15:07:16.716 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 25.0715ms
+2023-01-21 15:07:16.739 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 15:07:16.739 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 15:07:16.739 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 0.4625ms
+2023-01-21 15:07:16.755 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 15:07:16.774 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 15:07:16.791 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 15:07:16.791 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 35.6137ms
+2023-01-21 15:07:16.918 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 15:07:16.919 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 15:07:16.938 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 15:07:16.939 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 20.8057ms
+2023-01-21 15:07:17.019 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=IDHstWl-ZAKC-lpF9hZCbg - -
+2023-01-21 15:07:17.020 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 15:07:17.719 +01:00 [INF] Start Initialisation
+2023-01-21 15:07:18.989 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 15:07:19.099 +01:00 [INF] Initialisation done
+2023-01-21 15:07:19.103 +01:00 [INF] Load Elements
+2023-01-21 15:07:19.156 +01:00 [INF] Load Elements done
+2023-01-21 15:07:29.515 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundary4BUQc9VunBPPSu0m 359
+2023-01-21 15:07:29.515 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 15:07:29.581 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 15:07:29.582 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=IDHstWl-ZAKC-lpF9hZCbg - - - 101 - - 12562.1217ms
+2023-01-21 15:07:29.606 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 15:07:29.608 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundary4BUQc9VunBPPSu0m 359 - 200 0 - 92.8168ms
+2023-01-21 15:07:59.961 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 15:08:00.364 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 15:08:00.373 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 15:08:00.376 +01:00 [INF] Hosting environment: Development
+2023-01-21 15:08:00.379 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 15:08:01.228 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 15:08:01.300 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 15:08:01.333 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 15:08:01.361 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 15:08:01.364 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 15:08:01.720 +01:00 [INF] Executed page /_Host in 381.021ms
+2023-01-21 15:08:01.721 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 15:08:01.764 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 540.9288ms
+2023-01-21 15:08:01.782 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 15:08:01.783 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 15:08:01.785 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 15:08:01.821 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 15:08:01.825 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 15:08:01.827 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 0.9507ms
+2023-01-21 15:08:01.828 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 15:08:01.828 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 42.6098ms
+2023-01-21 15:08:01.830 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 15:08:01.830 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 15:08:01.830 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 15:08:01.831 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 48.7105ms
+2023-01-21 15:08:01.831 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 10.3001ms
+2023-01-21 15:08:01.831 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 3.4116ms
+2023-01-21 15:08:01.834 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 15:08:01.834 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 15:08:01.834 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 0.3033ms
+2023-01-21 15:08:01.834 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 15:08:01.838 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 15:08:01.838 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 55.4880ms
+2023-01-21 15:08:01.839 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 5.0691ms
+2023-01-21 15:08:01.852 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 15:08:01.852 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 15:08:01.853 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 1.4351ms
+2023-01-21 15:08:01.888 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 15:08:01.929 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 15:08:01.934 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 15:08:01.934 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 45.9801ms
+2023-01-21 15:08:01.950 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 15:08:01.951 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 15:08:01.971 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 15:08:01.971 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 21.0338ms
+2023-01-21 15:08:01.981 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=JTo49e2a5hrP6mtNEloBLw - -
+2023-01-21 15:08:01.981 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 15:08:02.459 +01:00 [INF] Start Initialisation
+2023-01-21 15:08:03.658 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 15:08:03.725 +01:00 [INF] Initialisation done
+2023-01-21 15:08:03.730 +01:00 [INF] Load Elements
+2023-01-21 15:08:03.797 +01:00 [INF] Load Elements done
+2023-01-21 15:08:16.950 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryryg65Id2WoE7BvVR 359
+2023-01-21 15:08:16.951 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 15:08:17.010 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 15:08:17.010 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=JTo49e2a5hrP6mtNEloBLw - - - 101 - - 15029.2025ms
+2023-01-21 15:08:17.014 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 15:08:17.014 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundaryryg65Id2WoE7BvVR 359 - 200 0 - 64.0428ms
+2023-01-21 15:08:44.299 +01:00 [INF] User profile is available. Using 'C:\Users\heiko\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-21 15:08:44.657 +01:00 [INF] Now listening on: http://localhost:5026
+2023-01-21 15:08:44.715 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-21 15:08:44.721 +01:00 [INF] Hosting environment: Development
+2023-01-21 15:08:44.727 +01:00 [INF] Content root path: C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\BulletinBoard\
+2023-01-21 15:08:45.447 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/ - -
+2023-01-21 15:08:45.541 +01:00 [INF] Executing endpoint '/_Host'
+2023-01-21 15:08:45.587 +01:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2023-01-21 15:08:45.615 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-01-21 15:08:45.618 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-01-21 15:08:46.047 +01:00 [INF] Executed page /_Host in 442.3047ms
+2023-01-21 15:08:46.049 +01:00 [INF] Executed endpoint '/_Host'
+2023-01-21 15:08:46.102 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/ - - - 200 - text/html;+charset=utf-8 662.4048ms
+2023-01-21 15:08:46.151 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/site.css - -
+2023-01-21 15:08:46.158 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - -
+2023-01-21 15:08:46.181 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - -
+2023-01-21 15:08:46.185 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/Smart.Blazor/css/smart.default.css - - - 404 0 - 3.5284ms
+2023-01-21 15:08:46.185 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/BulletinBoard.styles.css - - - 404 0 - 32.6598ms
+2023-01-21 15:08:46.188 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - -
+2023-01-21 15:08:46.192 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/aspnetcore-browser-refresh.js - - - 200 11959 application/javascript;+charset=utf-8 3.4569ms
+2023-01-21 15:08:46.200 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - -
+2023-01-21 15:08:46.214 +01:00 [INF] The file /css/site.css was not modified
+2023-01-21 15:08:46.214 +01:00 [INF] The file /_framework/blazor.server.js was not modified
+2023-01-21 15:08:46.214 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/site.css - - - 304 - text/css 63.4957ms
+2023-01-21 15:08:46.263 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_framework/blazor.server.js - - - 304 - application/javascript 62.6587ms
+2023-01-21 15:08:46.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - -
+2023-01-21 15:08:46.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - -
+2023-01-21 15:08:46.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - -
+2023-01-21 15:08:46.273 +01:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2023-01-21 15:08:46.273 +01:00 [INF] The file /_content/BlazorStrap/blazorstrap.js was not modified
+2023-01-21 15:08:46.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - -
+2023-01-21 15:08:46.274 +01:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2023-01-21 15:08:46.274 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/blazorstrap.js - - - 304 - application/javascript 1.4169ms
+2023-01-21 15:08:46.274 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/bootstrap/bootstrap.min.css - - - 304 - text/css 1.9642ms
+2023-01-21 15:08:46.274 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 304 - text/css 1.5413ms
+2023-01-21 15:08:46.273 +01:00 [INF] The file /_content/BlazorStrap/popper.min.js was not modified
+2023-01-21 15:08:46.275 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_content/BlazorStrap/popper.min.js - - - 304 - application/javascript 2.1817ms
+2023-01-21 15:08:46.365 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor/initializers - -
+2023-01-21 15:08:46.371 +01:00 [INF] Executing endpoint 'Blazor initializers'
+2023-01-21 15:08:46.376 +01:00 [INF] Executed endpoint 'Blazor initializers'
+2023-01-21 15:08:46.376 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor/initializers - - - 200 - application/json;+charset=utf-8 11.1063ms
+2023-01-21 15:08:46.435 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2023-01-21 15:08:46.437 +01:00 [INF] Executing endpoint '/_blazor/negotiate'
+2023-01-21 15:08:46.473 +01:00 [INF] Executed endpoint '/_blazor/negotiate'
+2023-01-21 15:08:46.473 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 37.7532ms
+2023-01-21 15:08:46.546 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/_blazor?id=UmzexxeGd_I7LqgGtF3a6Q - -
+2023-01-21 15:08:46.547 +01:00 [INF] Executing endpoint '/_blazor'
+2023-01-21 15:08:46.986 +01:00 [INF] Start Initialisation
+2023-01-21 15:08:48.166 +01:00 [WRN] File not Found: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+System.IO.FileNotFoundException: C:\Users\heiko\BulletinBoard\WelcomeImage\_MG_7958 - Kopie.JPG
+   at hgSoftware.Infrastructure.FileReaders.WelcomeImageReader.ReadImage(String filePath) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\Infrastructure\FileReaders\WelcomeImageReader.cs:line 27
+   at hgSoftware.DomainServices.Services.InitService.TryToReadFile(Action`1 readAction, String path) in C:\Users\heiko\Git\BulletinBoard2.0\BulletinBoard\DomainServices\Services\InitService.cs:line 97
+2023-01-21 15:08:48.239 +01:00 [INF] Initialisation done
+2023-01-21 15:08:48.243 +01:00 [INF] Load Elements
+2023-01-21 15:08:48.297 +01:00 [INF] Load Elements done
+2023-01-21 15:08:58.946 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundarysCuzqRmRD5FSWbNX 359
+2023-01-21 15:08:58.946 +01:00 [INF] Executing endpoint 'Blazor disconnect'
+2023-01-21 15:08:59.000 +01:00 [INF] Executed endpoint '/_blazor'
+2023-01-21 15:08:59.000 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/_blazor?id=UmzexxeGd_I7LqgGtF3a6Q - - - 101 - - 12454.1535ms
+2023-01-21 15:08:59.008 +01:00 [INF] Executed endpoint 'Blazor disconnect'
+2023-01-21 15:08:59.008 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5026/_blazor/disconnect multipart/form-data;+boundary=----WebKitFormBoundarysCuzqRmRD5FSWbNX 359 - 200 0 - 62.2614ms

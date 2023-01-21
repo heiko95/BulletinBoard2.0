@@ -25,11 +25,20 @@ namespace hgSoftware.Infrastructure.Repositories
 
         #region Public Methods
 
-        public BibleInfo GetBibleInfoByDate(int day, int month, int year)
-            => _mapper.Map<BibleInfo>(_context.Events.FirstOrDefault(e => e.Date.Day == day && e.Date.Month == month && e.Date.Year == year)) ?? new BibleInfo();
+        public BibleInfo GetBibleInfoByDate(DateOnly date, TimeOnly time)
+        {
+            var events = _context.Events.Where(e => e.Date.Day == date.Day && e.Date.Month == date.Month && e.Date.Year == date.Year).ToList();
 
-        public IList<PlannerEvent> GetEventsByDate(int day, int month, int year)
-                    => _mapper.Map<IList<PlannerEvent>>(_context.Events.Where(e => e.Date.Day >= day && e.Date.Month == month && e.Date.Year == year).ToList()) ?? new List<PlannerEvent>();
+            if (events.Count == 0) return new BibleInfo();
+            if (events.Count == 1) return _mapper.Map<BibleInfo>(events.First());
+            return _mapper.Map<BibleInfo>(events
+                .Where(x => x.Time.TimeOfDay >= time.ToTimeSpan())
+                .OrderBy(x => (x.Time.TimeOfDay - time.ToTimeSpan()).TotalMilliseconds)
+                .FirstOrDefault());
+        }
+
+        public IList<PlannerEvent> GetEventsByDate(DateOnly date)
+                    => _mapper.Map<IList<PlannerEvent>>(_context.Events.Where(e => e.Date.Day >= date.Day && e.Date.Month == date.Month && e.Date.Year == date.Year).ToList()) ?? new List<PlannerEvent>();
 
         #endregion Public Methods
     }

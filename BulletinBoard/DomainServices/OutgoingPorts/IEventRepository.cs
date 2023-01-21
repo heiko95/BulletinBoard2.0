@@ -6,9 +6,9 @@ namespace hgSoftware.DomainServices.OutgoingPorts
     {
         #region Public Methods
 
-        BibleInfo GetBibleInfoByDate(int day, int month, int year);
+        BibleInfo GetBibleInfoByDate(DateOnly date, TimeOnly time);
 
-        IList<PlannerEvent> GetEventsByDate(int month, int year, int year1);
+        IList<PlannerEvent> GetEventsByDate(DateOnly date);
 
         #endregion Public Methods
     }

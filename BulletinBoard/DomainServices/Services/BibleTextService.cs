@@ -34,7 +34,7 @@ namespace hgSoftware.DomainServices.Services
         public BibleTextElement? GetBibleElementOfToday()
         {
             var date = DateTime.Now;
-            var bibleInfo = _eventRepository.GetBibleInfoByDate(date.Day, date.Month, date.Year);
+            var bibleInfo = _eventRepository.GetBibleInfoByDate(DateOnly.FromDateTime(date), TimeOnly.FromDateTime(date));
 
             if (bibleInfo.IsEmpty()) return null;
 

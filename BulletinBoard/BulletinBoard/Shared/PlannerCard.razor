@@ -1,13 +1,44 @@
 ﻿@using hgSoftware.DomainServices.Models
 
-<div class="dates-container">
+
+<div class="background-image">
+    <div class="background-left">
+    <div class="planner-container"> 
     <div class ="event_component">
-        @for(var i = 0; i < PlannerElement.PlannerSections.Count; i++)
-        {
-             <EventCard PlannerSection=@PlannerElement.PlannerSections[i]></EventCard>
+        <table>
+            @{
+                PlannerSection last=PlannerElement.PlannerSections.Last();
+                foreach(var PlannerSection in PlannerElement.PlannerSections)
+                {
+                    if (PlannerSection.Equals(last))
+                    {
+                        <tr>
+                            <th colspan="4" class="planner-month planner-month--last">@PlannerSection.Month</th>
+            </tr>
+            }
+                    else
+                    {
+                        <tr>
+                            <th colspan="4" class="planner-month">@PlannerSection.Month</th>
+                        </tr>
+                    }
+            @foreach (var eventElement in PlannerSection.Events)
+            {
+                <tr class="planner-tr">
+                            <td class="planner-day">@eventElement.Day</td>
+                            <td class="planner-date">@eventElement.Date</td>
+                            <td class="planner-time">@eventElement.DateTime.ToString("HH:mm")</td>
+                            <td class="planner-description">@eventElement.Description</td>
+                            <td class="planner-bibleverse">@eventElement.BibleText</td>
+                            <td class="planner-location">@eventElement.Location</td>
+                </tr>
+            }
         }
+        }
+        </table>
     </div>
-   
+    </div>
+    </div>
 </div>
 
 @code{

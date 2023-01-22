@@ -111,7 +111,7 @@
     /*background-image: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.85) 32.9%, rgba(64, 118, 130, 0.85) 33.15%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%), url("../css/assets/church.jpg");*/
     background-image: linear-gradient(95.7391704773deg, rgba(64, 118, 130, 0.85) 42.9%, rgba(128, 128, 128, 0.85) 43.15%), 
         linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%), 
-        url("../css/assets/church.jpg");
+        url("../css/assets/church_new.jpg");
 }
 
 .event_component {
@@ -135,7 +135,7 @@
     background-size: 120vw 120vh;
     background-image: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.85) 32.9%, rgba(64, 118, 130, 0.85) 33.15%), 
         linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%), 
-        url("../css/assets/church.jpg");
+        url("../css/assets/bible_new.jpg");
 }
 
 .bibleversecard {

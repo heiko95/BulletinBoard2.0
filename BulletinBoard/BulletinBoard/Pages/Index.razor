@@ -15,17 +15,17 @@
             @switch(element)
             {
                 case ImageElement:    
-                    <BSCarouselItem Interval="@SlideSettings.ImageInterval">
+                    <BSCarouselItem Interval="@ImageInterval">
                         <ImageCard ImageElement=@(element as ImageElement)></ImageCard>
                     </BSCarouselItem>
                     break;
                 case PlannerElement:        
-                    <BSCarouselItem Interval="@SlideSettings.PlannerInterval">
+                    <BSCarouselItem Interval="@PlannerInterval">
                         <PlannerCard PlannerElement=@(element as PlannerElement)></PlannerCard>   
                     </BSCarouselItem>
                     break;
                 case BibleTextElement:
-                    <BSCarouselItem Interval="@SlideSettings.BibleTextInterval">
+                    <BSCarouselItem Interval="@BibleTextInterval">
                         <BibleVerseCard BibleTextElement=@(element as BibleTextElement)></BibleVerseCard>
                     </BSCarouselItem>
                     break;
@@ -42,16 +42,24 @@ else
 @code{
 
     IList<IElement> Elements = new List<IElement>();
-    SlideSettings SlideSettings = new SlideSettings();
-    int  Interval = 0;
+    int ImageInterval, BibleTextInterval, PlannerInterval  = 0;  
+
     bool DataIsLoaded = false;
 
     protected override async Task OnParametersSetAsync()
     {
         await BoardElementService.InitElements();
-        SlideSettings = BoardElementService.GetSlideSettings();
+        var slideSettings = BoardElementService.GetSlideSettings();       
+
         Elements = await BoardElementService.GetCurrentElements();
-        if (Elements.Count > 1) Interval = 2000;
+
+        if (Elements.Count > 1)
+        {
+            ImageInterval = slideSettings.ImageInterval;
+            BibleTextInterval = slideSettings.BibleTextInterval;
+            PlannerInterval = slideSettings.PlannerInterval;            
+        }
+
         DataIsLoaded = true;
 
     }

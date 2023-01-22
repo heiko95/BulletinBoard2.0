@@ -27,10 +27,12 @@ namespace hgSoftware.Infrastructure.Repositories
 
         public BibleInfo GetBibleInfoByDate(DateOnly date, TimeOnly time)
         {
-            var events = _context.Events.Where(e => e.Date.Day == date.Day && e.Date.Month == date.Month && e.Date.Year == date.Year).ToList();
+            var events = _context.Events.Where(e => e.Date.Day == date.Day && e.Date.Month == date.Month && e.Date.Year == date.Year && !string.IsNullOrEmpty(e.Book))
+                                        .ToList();
 
             if (events.Count == 0) return new BibleInfo();
             if (events.Count == 1) return _mapper.Map<BibleInfo>(events.First());
+
             return _mapper.Map<BibleInfo>(events
                 .Where(x => x.Time.TimeOfDay >= time.ToTimeSpan())
                 .OrderBy(x => (x.Time.TimeOfDay - time.ToTimeSpan()).TotalMilliseconds)

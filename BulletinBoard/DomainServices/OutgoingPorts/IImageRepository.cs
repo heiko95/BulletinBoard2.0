@@ -8,7 +8,7 @@ namespace hgSoftware.DomainServices.OutgoingPorts
 
         IList<ImageElement> GetImages(int maxCount);
 
-        ImageElement? GetWelcomeImage();
+        WelcomeElement? GetWelcomeImage();
 
         #endregion Public Methods
     }

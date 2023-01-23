@@ -6,7 +6,7 @@ namespace hgSoftware.DomainServices.IncomingPorts
     {
         #region Public Methods
 
-        ImageElement? GetWelcomePicture();
+        WelcomeElement? GetWelcomePicture();
 
         #endregion Public Methods
     }

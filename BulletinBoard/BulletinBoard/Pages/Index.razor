@@ -9,37 +9,54 @@
 @if (Elements.Count > 0 && DataIsLoaded)
 {
     <BSCarousel style="height:100vh">   
-        @foreach(var element in Elements)
-        {
-           
-            @switch(element)
+       
+        @{  var count = 0; 
+
+            foreach(var element in Elements)
             {
-                case ImageElement:    
+                var direction = (Direction)(count%2);
+                switch(element)
+                {
+                    case WelcomeElement:    
                     <BSCarouselItem Interval="@ImageInterval">
-                        <ImageCard ImageElement=@(element as ImageElement)></ImageCard>
+                        <WelcomeCard WelcomeElement=@(element as WelcomeElement) Direction=@(direction.ToString())></WelcomeCard>
                     </BSCarouselItem>
                     break;
-                case PlannerElement:        
+                    case ImageElement:    
+                    <BSCarouselItem Interval="@ImageInterval">
+                        <ImageCard ImageElement=@(element as ImageElement) Direction=@(direction.ToString())></ImageCard>
+                    </BSCarouselItem>
+                    break;
+                    case PlannerElement:        
                     <BSCarouselItem Interval="@PlannerInterval">
-                        <PlannerCard PlannerElement=@(element as PlannerElement)></PlannerCard>   
+                        <PlannerCard PlannerElement=@(element as PlannerElement) Direction=@(direction.ToString())></PlannerCard>   
                     </BSCarouselItem>
                     break;
-                case BibleTextElement:
+                    case BibleTextElement:
                     <BSCarouselItem Interval="@BibleTextInterval">
-                        <BibleVerseCard BibleTextElement=@(element as BibleTextElement)></BibleVerseCard>
-                    </BSCarouselItem>
-                    break;
-            }                 
-        }     
+                        <BibleVerseCard BibleTextElement=@(element as BibleTextElement) Direction=@(direction.ToString())></BibleVerseCard>
+                        </BSCarouselItem>
+                     break;
+                }
+                count++;
+            } 
+        }
     </BSCarousel>
 }
 else 
-{
+{    
     <p><em>Loading...</em></p>
 }
 
 
 @code{
+
+
+    enum Direction
+    {
+        left,
+        right
+    };
 
     IList<IElement> Elements = new List<IElement>();
     int ImageInterval, BibleTextInterval, PlannerInterval  = 0;  

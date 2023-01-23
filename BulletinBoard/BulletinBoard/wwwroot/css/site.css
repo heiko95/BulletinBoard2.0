@@ -1,18 +1,12 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+/*common*/
+
 .background-left {
     content: "";
     background-size: 100vw 100vh;
     background: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.55) 57.85%, rgba(64, 118, 130, 0.75) 57.1%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
 }
-
-/*.background-left::before {
-    content: "";
-    width: 100vw;
-    height: 100vh;    
-    background-size: 100vw 100vh;
-    background: linear-gradient(95.7391704773deg, rgba(64, 118, 130, 0.75) 27.9%, rgba(128, 128, 128, 0.55) 27.15%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
-}*/
 
 .background-right {
     content: "";
@@ -35,17 +29,31 @@
     background-image: url("../css/assets/church_new.jpg");
 }
 
-.event_component {
-    width: 80vw;
-    background-color: rgba(255,255,255,1);
-    padding: 45px 80px;
-    filter: drop-shadow(5px 5px 30px black);
-    border-radius: 30px;
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    align-content: normal;
+    height: 100vh;
+    width: 100vw;
 }
 
-.planner-tr {
-    font-size: 1.5em;
-    border-spacing: 30px;
+/*PlannerCard-Komponente*/
+
+.plannercard {
+    width: 80vw;
+    padding: 45px 80px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    background-color: rgba(255,255,255,1);
+    filter: drop-shadow(5px 5px 30px black);
+    border-radius: 30px;
 }
 
 .planner-month {
@@ -60,85 +68,56 @@
     padding-top: 30px;
 }
 
+.planner-tr {
+    font-size: 1.5em;
+    border-spacing: 30px;
+}
+
+.planner-td {
+    vertical-align: top;
+    padding-bottom: 20px;
+}
+
 .planner-day {
     text-align: left;
     padding-right: 15px;
-    padding-bottom: 20px;
-    vertical-align: top;
     white-space: nowrap;
 }
 
 .planner-date {
     padding-right: 45px;
-    padding-bottom: 20px;
-    vertical-align: top;
     white-space: nowrap;
 }
 
 .planner-time {
     padding-right: 65px;
-    padding-bottom: 20px;
-    vertical-align: top;
     white-space: nowrap;
 }
 
 .planner-description {
     padding-right: 85px;
-    padding-bottom: 20px;
-    vertical-align: top;
 }
 
 .planner-bibleverse {
     padding-right: 65px;
-    padding-bottom: 20px;
-    vertical-align: top;
     white-space: nowrap;
 }
 
 .planner-location {
-    padding-bottom: 20px;
-    vertical-align: top;
     white-space: nowrap;
 }
 
-.planner-container {
-    display: grid;
-    position: relative;
-    justify-content: center;
-    align-content: center;
-    grid-auto-flow: row;
-    height: 100vh;
-    width: 100vw;
-}
-
-.event_component {
-    display: grid;
-}
-
-.header-dates {
-    font-size: 2rem;
-    padding-left: 1rem;
-}
-
-
-.bibleversecard_grid-container {
-    display: grid;
-    grid-template-columns: 10vw auto 10vw;
-    grid-template-rows: 10vw auto 10vw;
-    justify-items: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-}
+/*BibleVerseCard-Komponente*/
 
 .bibleversecard {
-    display: grid;
-    position: absolute;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
     width: 70vw;
-    background-color: rgba(255,255,255,1);
     padding: 45px 80px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    background-color: rgba(255,255,255,1);
     filter: drop-shadow(5px 5px 30px black);
     border-radius: 30px;
 }
@@ -174,19 +153,7 @@
     background-color: #254061;
 }
 
-
-
-.imagecard-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    position: relative;
-    justify-content: space-around;
-    align-items: center;
-    align-content: normal;
-    height: 100vh;
-    width: 100vw;
-}
+/*ImageCard-Komponente*/
 
 .imagecard {
     display: block;

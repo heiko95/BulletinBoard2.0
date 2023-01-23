@@ -23,10 +23,9 @@ namespace hgSoftware.DomainServices.Services
 
         #region Public Methods
 
-        public ImageElement? GetWelcomePicture()
+        public WelcomeElement? GetWelcomePicture()
             => _imageRepository.GetWelcomeImage();
 
         #endregion Public Methods
-
     }
 }

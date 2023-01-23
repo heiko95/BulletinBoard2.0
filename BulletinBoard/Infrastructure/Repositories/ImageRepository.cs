@@ -30,10 +30,10 @@ namespace hgSoftware.Infrastructure.Repositories
             return _mapper.Map<IList<ImageElement>>(_context.Images.Take(maxCount).ToList());
         }
 
-        public ImageElement? GetWelcomeImage()
+        public WelcomeElement? GetWelcomeImage()
         {
             if (_context.WelcomeImage == null) return null;
-            return _mapper.Map<ImageElement>(_context.WelcomeImage);
+            return _mapper.Map<WelcomeElement>(_context.WelcomeImage);
         }
 
         #endregion Public Methods

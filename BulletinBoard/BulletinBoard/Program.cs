@@ -9,6 +9,7 @@ using hgSoftware.Infrastructure;
 using hgSoftware.Infrastructure.FileReaders;
 using hgSoftware.Infrastructure.Profiles;
 using hgSoftware.Infrastructure.Repositories;
+using hgSoftware.Infrastructure.Updater;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,7 @@ builder.Services.Configure<ElementSettings>(ElementSettings.WelcomeScreenSetting
 builder.Services.Configure<ElementSettings>(ElementSettings.ImageScreenSettings, builder.Configuration.GetSection("ElementSettings:ImageScreenSettings"));
 builder.Services.Configure<ElementSettings>(ElementSettings.BibleSettings, builder.Configuration.GetSection("ElementSettings:BibleSettings"));
 builder.Services.Configure<SlideSettings>(builder.Configuration.GetSection("SlideSettings"));
+builder.Services.Configure<SyncSettings>(builder.Configuration.GetSection("SyncSettings"));
 
 // Add Domain and Infrastructure Services
 builder.Services.AddSingleton<IBibleTextService, BibleTextService>();
@@ -46,6 +48,7 @@ builder.Services.AddSingleton<IImageFilesReader, ImageFilesReader>();
 builder.Services.AddSingleton<IImageRepository, ImageRepository>();
 builder.Services.AddSingleton<IBibleFileReader, BibleFileReader>();
 builder.Services.AddSingleton<IBibleTextRepository, BibleTextRepository>();
+builder.Services.AddSingleton<IFileUpdater, FileUpdater>();
 
 builder.Services.AddSingleton<Context>();
 

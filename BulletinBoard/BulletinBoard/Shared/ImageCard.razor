@@ -1,9 +1,9 @@
 ﻿@using hgSoftware.DomainServices.Models
 
 <div class="background-image-imagecard">
-    <div class="background-left">
+    <div class="@($"background-{Direction}")">
         <div class="card-container">
-            <div class="imagecard">
+            <div class="card">
                 <img class="image" src=@ImageElement.Base64Image alt=@ImageElement.ImageName/>
             </div>
         </div>

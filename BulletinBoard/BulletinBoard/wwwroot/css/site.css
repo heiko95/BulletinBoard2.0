@@ -5,13 +5,15 @@
 .background-left {
     content: "";
     background-size: 100vw 100vh;
-    background: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.55) 57.85%, rgba(64, 118, 130, 0.75) 57.1%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
+    background: linear-gradient(95.7391704773deg, rgba(64, 118, 130, 0.75) 33.85%, rgba(128, 128, 128, 0.55) 33.1%), 
+        linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
 }
 
 .background-right {
     content: "";
     background-size: 100vw 100vh;
-    background: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.55) 57.85%, rgba(64, 118, 130, 0.75) 57.1%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
+    background: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.55) 57.85%, rgba(64, 118, 130, 0.75) 57.1%), 
+        linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
 }
 
 .background-image-planner {
@@ -29,6 +31,11 @@
     background-image: url("../css/assets/church_new.jpg");
 }
 
+.background-image-welcomecard {
+    background-size: 100vw 100vh;
+    background-image: url("../css/assets/church_new.jpg");
+}
+
 .card-container {
     display: flex;
     flex-direction: row;
@@ -41,19 +48,22 @@
     width: 100vw;
 }
 
+.card {
+    border-radius: 30px;
+    background-color: rgba(255,255,255,1);
+    filter: drop-shadow(5px 5px 30px black);
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    display: block;
+}
+
 /*PlannerCard-Komponente*/
 
 .plannercard {
     width: 80vw;
     padding: 45px 80px;
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    background-color: rgba(255,255,255,1);
-    filter: drop-shadow(5px 5px 30px black);
-    border-radius: 30px;
 }
 
 .planner-month {
@@ -112,14 +122,6 @@
 .bibleversecard {
     width: 70vw;
     padding: 45px 80px;
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    background-color: rgba(255,255,255,1);
-    filter: drop-shadow(5px 5px 30px black);
-    border-radius: 30px;
 }
 
 .bibleversecard-header {
@@ -169,14 +171,23 @@
 .image {
     z-index: -1;
     border-radius: 30px;
-    max-height: 95vh;
-    max-width: 95vw;
+    max-height: 90vh;
+    max-width: 90vw;
     border: 5px solid white;
 }
 
+/*WelcomeCard-Komponente*/
 
-
-
+.welcomecard-image {
+    border-radius: 30px;
+    object-fit: cover;
+    border: 5px solid white;
+/*    height: 95vh;
+    width: 95vw;*/
+    justify-content: center;
+    align-items: center;
+    margin: 5vw;
+}
 
 
 

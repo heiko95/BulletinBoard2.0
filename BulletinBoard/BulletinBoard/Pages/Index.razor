@@ -17,8 +17,8 @@
                 var direction = (Direction)(count%2);
                 switch(element)
                 {
-                    case WelcomeElement:    
-                    <BSCarouselItem Interval="@ImageInterval">
+                    case WelcomeElement:
+                    <BSCarouselItem Interval="@WelcomeInterval">
                         <WelcomeCard WelcomeElement=@(element as WelcomeElement) Direction=@(direction.ToString())></WelcomeCard>
                     </BSCarouselItem>
                     break;
@@ -59,7 +59,7 @@ else
     };
 
     IList<IElement> Elements = new List<IElement>();
-    int ImageInterval, BibleTextInterval, PlannerInterval  = 0;  
+    int ImageInterval, BibleTextInterval, PlannerInterval, WelcomeInterval = 0;
 
     bool DataIsLoaded = false;
 
@@ -74,7 +74,8 @@ else
         {
             ImageInterval = slideSettings.ImageInterval;
             BibleTextInterval = slideSettings.BibleTextInterval;
-            PlannerInterval = slideSettings.PlannerInterval;            
+            PlannerInterval = slideSettings.PlannerInterval;
+            WelcomeInterval = slideSettings.WelcomeInterval;
         }
 
         DataIsLoaded = true;

@@ -8,6 +8,8 @@
         public int ImageInterval { get; set; }
         public int PlannerInterval { get; set; }
 
+        public int WelcomeInterval { get; set; }
+
         #endregion Public Properties
     }
 }

@@ -12,10 +12,12 @@ namespace hgSoftware.DomainServices.Services
 
         private readonly IBibleFileReader _bibleFileReader;
         private readonly IEventFileReader _eventFileReader;
+        private readonly IFileUpdater _fileUpdater;
         private readonly IImageFilesReader _imageFilesReader;
         private readonly ILogger<IInitService> _logger;
         private readonly IOptionsMonitor<ElementSettings> _namedOptionsAccessor;
-        private readonly IOptions<SlideSettings> _slideOptions;
+        private readonly SlideSettings _slideOptions;
+        private readonly SyncSettings _syncOptions;
         private readonly IWelcomeImageReader _welcomeImageReader;
 
         #endregion Private Fields
@@ -24,18 +26,22 @@ namespace hgSoftware.DomainServices.Services
 
         public InitService(IOptionsMonitor<ElementSettings> namedOptionsAccessor,
                            IOptions<SlideSettings> slideOptions,
+                           IOptions<SyncSettings> syncOptions,
                            IImageFilesReader imageFilesReader,
                            IWelcomeImageReader welcomeImageReader,
                            IEventFileReader eventFileReader,
                            IBibleFileReader bibleFileReader,
+                           IFileUpdater fileUpdater,
                            ILogger<IInitService> logger)
         {
             _namedOptionsAccessor = namedOptionsAccessor;
-            _slideOptions = slideOptions;
+            _slideOptions = slideOptions.Value;
+            _syncOptions = syncOptions.Value;
             _imageFilesReader = imageFilesReader;
             _welcomeImageReader = welcomeImageReader;
             _eventFileReader = eventFileReader;
             _bibleFileReader = bibleFileReader;
+            _fileUpdater = fileUpdater;
             _logger = logger;
         }
 
@@ -45,7 +51,7 @@ namespace hgSoftware.DomainServices.Services
 
         public SlideSettings GetSlideSettings()
         {
-            return _slideOptions.Value;
+            return _slideOptions;
         }
 
         public async Task InitializeBulletinBoard()
@@ -60,7 +66,7 @@ namespace hgSoftware.DomainServices.Services
             CreateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.WelcomeScreenSettings).FolderName));
             CreateDirectory(Path.Combine(appDataFolder, _namedOptionsAccessor.Get(ElementSettings.BibleSettings).FolderName));
 
-            await UpdateDirectory(appDataFolder);
+            await UpdateDirectory();
 
             var welcomeTask = Task.Run(() => TryToReadFile(_eventFileReader.ReadEvents, Path.Combine(appDataFolder,
                                                      _namedOptionsAccessor.Get(ElementSettings.EventScreenSettings).FolderName,
@@ -106,10 +112,12 @@ namespace hgSoftware.DomainServices.Services
             }
         }
 
-        private async Task UpdateDirectory(string folderName)
+        private async Task UpdateDirectory()
         {
-            await Task.Delay(1000);
-            // TODO Do Rsync Stuff here
+            var syncservice = _syncOptions.FileName;
+            if (string.IsNullOrEmpty(syncservice)) return;
+            _logger.LogInformation("Start Filesync");
+            await _fileUpdater.RunFileSync(_syncOptions);
         }
 
         #endregion Private Methods

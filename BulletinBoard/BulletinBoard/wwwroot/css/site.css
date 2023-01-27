@@ -1,120 +1,311 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
-.full-image {
-    background-size: cover
+/*common*/
+
+.background-left {
+    content: "";
+    background-size: 100vw 100vh;
+    background: linear-gradient(95.7391704773deg, rgba(64, 118, 130, 0.75) 41.5%, rgba(128, 128, 128, 0.55) 41.9%), 
+        linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
 }
 
-.planner {
-    display: grid;
-/*    grid-template-columns: [first] auto [end]*/;
-    /*grid-template-rows: auto;*/
-    /*align-items: center;*/
-    /*justify-items: center;*/
-    /*background-color: aqua;*/
-/*    height: 50vh;
-    width: 100vw;*/
-    /*background-image: linear-gradient(180deg, white 0%, #a3bfe4 45%, #7ca6d8 81%, #5793C9 100%);*/
+.background-right {
+    content: "";
+    background-size: 100vw 100vh;
+    background: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.55) 57.5%, rgba(64, 118, 130, 0.75) 57.9%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
 }
 
-
-.planner__container {
-    /*position: absolute;*/
-    /*display: grid;*/
-    /*justify-content: center;*/
-
-    /*grid-template-columns: [first] auto [end];*/
-    /*grid-template-rows: auto;*/
-    row-gap: 10px;
+.background {
+    content: "";
+    background-size: 100vw 100vh;
+    background: rgba(128, 128, 128, 0.65);
 }
 
-.planner__heading {
-    font-size: 50px;    
+.background-image-planner {
+    background-size: 100vw 100vh;
+    background-image: url("../css/assets/church_new.jpg");
 }
 
-.planner__list {
-    display: grid;
-    /*position: relative;*/
-    grid-template-columns: [first] auto [end];
-    grid-template-rows: auto;
-/*    align-items: center;
-    justify-items: center;*/
+.background-image-bibleverse {
+    background-size: 100vw 100vh;
+    background-image: url("../css/assets/bible_new.jpg");
 }
 
-.planner__list-item {
-    display: grid;
-    grid-template-columns: [first] 100px [line2] 100px [line3] 150px [col4-start] auto [five] 250px [six] 250px [end];
-    grid-template-rows: auto;
-    grid-gap: 20px;
-    grid-row-gap: 20px;
-    vertical-align: central;
-    list-style-type: none;
-    font-size: 1.5rem;
-    white-space: nowrap;
-}
-.planner__list-item-list {
-    display: grid;
-    /*border: solid;*/
+.background-image-imagecard {
+    background-size: 100vw 100vh;
+    background-image: url("../css/assets/church_new.jpg");
 }
 
-.month {
-font-size: 40px;
+.background-image-welcomecard {
+    background-size: 100vw 100vh;
+    background-image: url("../css/assets/church_new.jpg");
 }
 
-.day {
-    text-align: right;
+.background-image-loadingscreen {
+    background-size: 100vw 100vh;
+    background-image: url("../css/assets/church_new.jpg");
 }
 
-.date {
-
-}
-
-.time {
-
-}
-
-.description {
-
-}
-
-.bibleverse {
-    text-align: left;
-    justify-self: start;
-    /*margin-left: 1vw;*/
-    /*margin-right: 1vw;*/
-}
-
-.location {
-  text-align: left;
-  /*margin-left:1vw;*/
-}
-
-.dates-container {
-    display: grid;
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     position: relative;
-    justify-content: center;
-    align-content: center;
-    grid-auto-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: normal;
     height: 100vh;
     width: 100vw;
 }
 
-.event_component {
-    display: grid;
+.card {
+    border-radius: 3em;
+    background-color: rgba(255,255,255,1);
+    filter: drop-shadow(5px 5px 30px black);
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    display: block;
 }
 
-.header-dates {
-    font-size: 2rem;
-    padding-left: 1rem;
+/*LoadingScreen*/
+
+.loadingscreen-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
 }
 
+.loadingscreen {
+    padding: 80px;
+    border-radius: 3em;
+    background-color: rgba(255, 255, 255, 0.6);
+    filter: drop-shadow(5px 5px 30px black);
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    display: flex;
+}
+
+.loadingscreen-line {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    margin-left: 75px;
+    margin-right: 75px;
+    background-color: rgba(64, 118, 130, 0.75);
+}
+
+.progressbar {
+    text-align: center;
+    display: block;
+    align-self: center;
+    font-size: 4em;
+}
+
+.loadingscreen-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.loadingscreen-product {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: normal;
+    margin: 0;
+}
+
+.loadingscreen-header {
+    font-size: 3em;
+    margin: 0;
+}
+
+.loadingscreen-vers {
+    font-size: 2em;
+    margin: 0;
+}
+
+.loadingscreen-tr {
+    font-size: 2em;
+    border-spacing: 5em;
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.spinner {
+    width: 9vw;
+    height: 9vw;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    display: flex;
+    justify-content: center;
+    border: 22px solid rgba(64, 118, 130, 0.5);
+    border-top: 22px solid rgba(64, 118, 130, 1);
+    border-radius: 50%;
+    animation: spin 2.5s linear infinite;
+    margin: 20px;
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 2em;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+/*PlannerCard-Komponente*/
+
+.plannercard {
+    width: 80vw;
+    padding: 45px 80px;
+    max-height: 85vh;
+}
+
+.planner-table {
+    width: 100%;
+}
+
+.planner-month {
+    font-size: 40px;
+    padding-bottom: 15px;
+    padding-top: 0;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.planner-month--last {
+    padding-top: 30px;
+}
+
+.planner-tr {
+    font-size: 1.5em;
+    border-spacing: 0.5em;
+}
+
+.planner-td {
+    vertical-align: top;
+    padding-bottom: 0.5em;
+}
+
+.planner-day {
+    text-align: left;
+    padding-right: 0.3em;
+    white-space: nowrap;
+}
+
+.planner-date {
+    padding-right: 0.9em;
+    white-space: nowrap;
+}
+
+.planner-time {
+    padding-right: 65px;
+    white-space: nowrap;
+}
+
+.planner-description {
+    padding-right: 85px;
+}
+
+.planner-bibleverse {
+    padding-right: 65px;
+    white-space: nowrap;
+}
+
+.planner-location {
+    white-space: nowrap;
+}
+
+/*BibleVerseCard-Komponente*/
+
+.bibleversecard {
+    width: 70vw;
+    padding: 45px 80px;
+}
+
+.bibleversecard-header {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.bibleversecard_loc {
+    font-size: 2.1rem;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+.bibleversecard_text {
+    font-size: 2.5rem;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.bibleversecard_text::before {
+    content: "";
+    display: block;
+    width: 8rem;
+    height: 0.25rem;
+    margin-left: 0;
+    margin-bottom: 2rem;
+    background-color: #254061;
+}
+
+/*ImageCard-Komponente*/
+
+.image {
+    z-index: -1;
+    border-radius: 30px;
+    max-height: 90vh;
+    max-width: 90vw;
+    border: 5px solid white;
+}
+
+/*WelcomeCard-Komponente*/
+
+.welcomecard-image {
+    border-radius: 30px;
+    object-fit: cover;
+    border: 5px solid white;
+    height: 95vh;
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+}
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica', Helvetica, Arial, sans-serif;
 }
 
 body {
-   /* height: 100vh;
-    width: 100vw;*/
     overflow: hidden;
 }
 

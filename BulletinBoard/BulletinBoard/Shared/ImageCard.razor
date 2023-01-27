@@ -1,16 +1,24 @@
-﻿
-<div style="background-color:red" >
+﻿@using hgSoftware.DomainServices.Models
 
-<h5>@Name</h5>
-<h5>@ImageBas64</h5>
-
+<div class="background-image-imagecard">
+    <div class="@($"background-{Direction}")">
+        <div class="card-container">
+            <div class="card">
+                <img class="image" src=@ImageElement.Base64Image alt=@ImageElement.ImageName/>
+            </div>
+        </div>
+    </div>
 </div>
 
+
+
+
+
 @code {
+    [Parameter]
+    public ImageElement ImageElement { get; set; } = new ImageElement();
 
-   [Parameter]
-   public string Name {get; set;}
+    [Parameter]
+    public string Direction { get; set; } = string.Empty;
 
-   [Parameter]
-   public string ImageBas64 {get; set;}  
 }

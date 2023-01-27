@@ -1,0 +1,30 @@
+﻿@using hgSoftware.DomainServices.Models;
+
+<div class="background-image-bibleverse">
+    <div class="background-left">
+        <div class="card-container">
+            <section class="card bibleversecard">
+                <p class="bibleversecard-header">
+                    Bibelwort
+                </p>
+                <p class="bibleversecard_loc">
+                    @BibleTextElement.BiblePassage
+                </p>
+                <p class="bibleversecard_text">
+                    @BibleTextElement.BibleText
+                </p>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+
+    [Parameter]
+    public BibleTextElement BibleTextElement { get; set; } = new BibleTextElement();
+
+    [Parameter]
+    public string Direction { get; set; } = string.Empty;
+}

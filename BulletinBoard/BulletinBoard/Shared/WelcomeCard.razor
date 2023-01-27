@@ -1,0 +1,19 @@
+﻿@using hgSoftware.DomainServices.Models
+
+<div class="background-image-welcomecard">
+    <div class="background-left">
+        <div class="card-container">
+                <img class="welcomecard-image" src=@WelcomeElement.Base64Image alt=@WelcomeElement.ImageName />
+        </div>
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public WelcomeElement WelcomeElement { get; set; } = new WelcomeElement();
+
+    [Parameter]
+    public string Direction { get; set; } = string.Empty;
+
+}

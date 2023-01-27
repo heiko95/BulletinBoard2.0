@@ -5,15 +5,20 @@
 .background-left {
     content: "";
     background-size: 100vw 100vh;
-    background: linear-gradient(95.7391704773deg, rgba(64, 118, 130, 0.75) 33.85%, rgba(128, 128, 128, 0.55) 33.1%), 
+    background: linear-gradient(95.7391704773deg, rgba(64, 118, 130, 0.75) 41.5%, rgba(128, 128, 128, 0.55) 41.9%), 
         linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
 }
 
 .background-right {
     content: "";
     background-size: 100vw 100vh;
-    background: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.55) 57.85%, rgba(64, 118, 130, 0.75) 57.1%), 
-        linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
+    background: linear-gradient(95.7391704773deg, rgba(128, 128, 128, 0.55) 57.5%, rgba(64, 118, 130, 0.75) 57.9%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 50%);
+}
+
+.background {
+    content: "";
+    background-size: 100vw 100vh;
+    background: rgba(128, 128, 128, 0.65);
 }
 
 .background-image-planner {
@@ -36,6 +41,11 @@
     background-image: url("../css/assets/church_new.jpg");
 }
 
+.background-image-loadingscreen {
+    background-size: 100vw 100vh;
+    background-image: url("../css/assets/church_new.jpg");
+}
+
 .card-container {
     display: flex;
     flex-direction: row;
@@ -49,7 +59,7 @@
 }
 
 .card {
-    border-radius: 30px;
+    border-radius: 3em;
     background-color: rgba(255,255,255,1);
     filter: drop-shadow(5px 5px 30px black);
     flex-grow: 0;
@@ -59,11 +69,125 @@
     display: block;
 }
 
+/*LoadingScreen*/
+
+.loadingscreen-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.loadingscreen {
+    padding: 80px;
+    border-radius: 3em;
+    background-color: rgba(255, 255, 255, 0.6);
+    filter: drop-shadow(5px 5px 30px black);
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    display: flex;
+}
+
+.loadingscreen-line {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    margin-left: 75px;
+    margin-right: 75px;
+    background-color: rgba(64, 118, 130, 0.75);
+}
+
+.progressbar {
+    text-align: center;
+    display: block;
+    align-self: center;
+    font-size: 4em;
+}
+
+.loadingscreen-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.loadingscreen-product {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: normal;
+    margin: 0;
+}
+
+.loadingscreen-header {
+    font-size: 3em;
+    margin: 0;
+}
+
+.loadingscreen-vers {
+    font-size: 2em;
+    margin: 0;
+}
+
+.loadingscreen-tr {
+    font-size: 2em;
+    border-spacing: 5em;
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.spinner {
+    width: 9vw;
+    height: 9vw;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    display: flex;
+    justify-content: center;
+    border: 22px solid rgba(64, 118, 130, 0.5);
+    border-top: 22px solid rgba(64, 118, 130, 1);
+    border-radius: 50%;
+    animation: spin 2.5s linear infinite;
+    margin: 20px;
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 2em;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
 /*PlannerCard-Komponente*/
 
 .plannercard {
     width: 80vw;
     padding: 45px 80px;
+    max-height: 85vh;
+}
+
+.planner-table {
+    width: 100%;
 }
 
 .planner-month {
@@ -80,22 +204,22 @@
 
 .planner-tr {
     font-size: 1.5em;
-    border-spacing: 30px;
+    border-spacing: 0.5em;
 }
 
 .planner-td {
     vertical-align: top;
-    padding-bottom: 20px;
+    padding-bottom: 0.5em;
 }
 
 .planner-day {
     text-align: left;
-    padding-right: 15px;
+    padding-right: 0.3em;
     white-space: nowrap;
 }
 
 .planner-date {
-    padding-right: 45px;
+    padding-right: 0.9em;
     white-space: nowrap;
 }
 
@@ -157,17 +281,6 @@
 
 /*ImageCard-Komponente*/
 
-.imagecard {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    background-color: rgba(255,255,255,1);
-    filter: drop-shadow(5px 5px 30px black);
-    border-radius: 30px;
-}
-
 .image {
     z-index: -1;
     border-radius: 30px;
@@ -187,9 +300,6 @@
     justify-content: center;
     align-items: center;
 }
-
-
-
 
 html, body {
     font-family: 'Helvetica', Helvetica, Arial, sans-serif;

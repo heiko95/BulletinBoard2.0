@@ -50,9 +50,9 @@ namespace hgSoftware.Infrastructure.FileReaders
                     AdditionalInfo = csv.GetField(3),
                     Person = csv.GetField(4),
                     Location = csv.GetField(5),
-                    Book = csv.GetField(11),
-                    Chapter = csv.GetField(12),
-                    Verse = csv.GetField(13)
+                    Book = csv.GetField(6),
+                    Chapter = csv.GetField(7),
+                    Verse = csv.GetField(8)
                 };
 
                 _context.Events.Add(@event);

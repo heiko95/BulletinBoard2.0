@@ -35,7 +35,7 @@ namespace hgSoftware.Infrastructure.FileReaders
             var configuration = new CsvConfiguration(new CultureInfo("de-DE"))
             {
                 Encoding = Encoding.UTF8,
-                Delimiter = ";",
+                Delimiter = "~",
                 HasHeaderRecord = false
             };
 
@@ -43,10 +43,10 @@ namespace hgSoftware.Infrastructure.FileReaders
             var headerRecord = csv.Read(); // Read Header Row
             while (csv.Read())
             {
-                _context.BibleVerses.Add(new BibleVerse(csv.GetField(1)!,
-                                                csv.GetField<int>(2),
-                                                csv.GetField<int>(3)!,
-                                                csv.GetField(4)!));
+                _context.BibleVerses.Add(new BibleVerse(csv.GetField(0)!,
+                                                csv.GetField<int>(1),
+                                                csv.GetField<int>(2)!,
+                                                csv.GetField(3)!));
             }
         }
 

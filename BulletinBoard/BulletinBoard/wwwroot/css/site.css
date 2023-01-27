@@ -84,8 +84,7 @@
 }
 
 .loadingscreen {
-    width: 40vw;
-    padding: 45px 80px;
+    padding: 80px;
     border-radius: 3em;
     background-color: rgba(255, 255, 255, 0.6);
     filter: drop-shadow(5px 5px 30px black);
@@ -93,20 +92,20 @@
     flex-shrink: 1;
     flex-basis: auto;
     align-self: auto;
-    display: block;
-    margin: 10em;
+    display: flex;
 }
 
 .loadingscreen-line {
     content: "";
     display: block;
     width: 0.5rem;
-    height: 60vh;
-    margin-left: 0;
+    /*height: 60vh;*/
+    margin-left: 75px;
+    margin-right: 75px;
     background-color: rgba(64, 118, 130, 0.75);
 }
 
-.loadingspinner {
+/*.loadingspinner {
     width: 20vw;
     height: 20vw;
     padding: 4.5em 8em;
@@ -118,7 +117,7 @@
     display: flex;
     margin: 10em;
     justify-content: center;
-}
+}*/
 
 .progressbar {
     text-align: center;
@@ -127,29 +126,71 @@
     font-size: 4em;
 }
 
+.loadingscreen-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+}
+
 .loadingscreen-product {
     font-size: 4rem;
     font-weight: bolder;
     text-align: left;
     font-weight: 900;
     letter-spacing: normal;
+    margin: 0;
 }
 
 .loadingscreen-header {
     font-size: 3em;
+    margin: 0;
 }
 
 .loadingscreen-vers {
-    font-size: 1.5em;
-}
-
-.loadingscreen-devs {
-    font-size: 1.5em;
+    font-size: 2em;
+    margin: 0;
 }
 
 .loadingscreen-tr {
     font-size: 2em;
     border-spacing: 5em;
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.spinner {
+    width: 9vw;
+    height: 9vw;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    display: flex;
+    justify-content: center;
+    border: 22px solid rgba(64, 118, 130, 0.5);
+    border-top: 22px solid rgba(64, 118, 130, 1);
+    border-radius: 50%;
+    animation: spin 2.5s linear infinite;
+    margin: 20px;
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 2em;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
 }
 
 /*PlannerCard-Komponente*/

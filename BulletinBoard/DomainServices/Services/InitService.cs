@@ -110,6 +110,10 @@ namespace hgSoftware.DomainServices.Services
             {
                 _logger.LogWarning(dex, "Directory not Found: {dict}", dex.Message);
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Cannot read file: {dict}", ex.Message);
+            }
         }
 
         private async Task UpdateDirectory()

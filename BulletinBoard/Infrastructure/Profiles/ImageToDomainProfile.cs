@@ -14,15 +14,18 @@ namespace hgSoftware.Infrastructure.Profiles
                 .ForMember(dest => dest.Base64Image,
                            opt => opt.MapFrom(src => src.ImageBase64))
 
-                .ForMember(dest => dest.ImageName,
-                           opt => opt.MapFrom(src => Path.GetFileName(src.ImagePath)));
+                .ForMember(dest => dest.Name,
+                           opt => opt.MapFrom(src => src.ImageName))
+
+                .ForMember(dest => dest.Date,
+                               opt => opt.MapFrom(src => src.ImageDate));
 
             CreateMap<Image, WelcomeElement>()
                .ForMember(dest => dest.Base64Image,
                           opt => opt.MapFrom(src => src.ImageBase64))
 
-               .ForMember(dest => dest.ImageName,
-                          opt => opt.MapFrom(src => Path.GetFileName(src.ImagePath)));
+               .ForMember(dest => dest.Name,
+                          opt => opt.MapFrom(src => src.ImageName));
         }
 
         #endregion Public Constructors

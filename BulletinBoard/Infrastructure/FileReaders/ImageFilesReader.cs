@@ -1,5 +1,6 @@
 ﻿using hgSoftware.DomainServices.OutgoingPorts;
 using hgSoftware.Infrastructure.Models;
+using System.Text.RegularExpressions;
 
 namespace hgSoftware.Infrastructure.FileReaders
 {
@@ -28,13 +29,15 @@ namespace hgSoftware.Infrastructure.FileReaders
 
             _context.Images.Clear();
 
-            foreach (var (file, base64Image) in from file in Directory.GetFiles(folderpath, "*.jpg")
+            foreach (var (name, base64Image) in from file in Directory.GetFiles(folderpath, "*.jpg")
+                                                let name = Path.GetFileNameWithoutExtension(file)
+                                                where Regex.IsMatch(name, @"^\d{4}_(0[1-9]|1[0-2])_(0[1-9]|1[0-9]|2[0-9]|3[0-1])_.+$")
                                                 let imageArray = File.ReadAllBytes(file)
                                                 let image = Convert.ToBase64String(imageArray)
                                                 let base64Image = string.Format("data:image/jpg;base64,{0}", image)
                                                 select (file, base64Image))
             {
-                _context.Images.Add(new Image(base64Image, file));
+                _context.Images.Add(new Image(base64Image, name));
             }
         }
 

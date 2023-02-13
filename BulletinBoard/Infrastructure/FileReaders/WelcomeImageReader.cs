@@ -29,7 +29,7 @@ namespace hgSoftware.Infrastructure.FileReaders
             var imageArray = File.ReadAllBytes(filePath);
             var image = Convert.ToBase64String(imageArray);
             var base64Image = string.Format("data:image/jpg;base64,{0}", image);
-            _context.WelcomeImage = new Image(base64Image, filePath);
+            _context.WelcomeImage = new Image(base64Image, DateOnly.FromDateTime(File.GetCreationTime(filePath)), filePath);
         }
 
         #endregion Public Methods

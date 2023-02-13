@@ -61,7 +61,7 @@ namespace hgSoftware.DomainServices.Services
                 if (first != null)
                 {
                     first.Day = first.DateTime.ToString("ddd", new CultureInfo("de-DE"));
-                    first.Date = first.DateTime.ToString("dd");
+                    first.Date = first.DateTime.ToString("dd.");
                 }
                 if (elementCount < eventElement.Count()) return result;
                 elementCount = elementCount - eventElement.Count();

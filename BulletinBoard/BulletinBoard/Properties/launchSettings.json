@@ -2,7 +2,7 @@
   "profiles": {
     "BulletinBoard": {
       "commandName": "Project",
-      "commandLineArgs": "--urls \"http://192.168.178.46:5100\"",
+      "commandLineArgs": "--urls \"http://192.168.178.11:5100\"",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

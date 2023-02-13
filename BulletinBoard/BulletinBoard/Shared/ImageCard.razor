@@ -3,8 +3,13 @@
 <div class="background-image-imagecard">
     <div class="@($"background-{Direction}")">
         <div class="card-container">
-            <div class="card">
+            <div class="card image-card">
                 <img class="image" src=@ImageElement.Base64Image alt=@ImageElement.Name/>
+                <div>
+                    <p class="image-sub">
+                        @ImageElement.Date - @ImageElement.Name 
+                    </p>
+                </div>
             </div>
         </div>
     </div>

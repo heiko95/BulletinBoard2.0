@@ -193,7 +193,7 @@
 .planner-month {
     font-size: 40px;
     padding-bottom: 15px;
-    padding-top: 0;
+    /*padding-top: 0;*/
     font-weight: 500;
     white-space: nowrap;
 }
@@ -281,12 +281,26 @@
 
 /*ImageCard-Komponente*/
 
+.image-card {
+    position: relative;
+}
+
 .image {
     z-index: -1;
     border-radius: 30px;
     max-height: 90vh;
     max-width: 90vw;
     border: 5px solid white;
+}
+
+.image-sub {
+    position: absolute;
+    bottom: -3px;
+    left: 20px;
+    color: white;
+    filter: drop-shadow(0px 0px 3px black);
+    font-weight: bold;
+    font-size: 40px;
 }
 
 /*WelcomeCard-Komponente*/

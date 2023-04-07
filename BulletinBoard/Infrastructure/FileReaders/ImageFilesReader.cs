@@ -29,18 +29,25 @@ namespace hgSoftware.Infrastructure.FileReaders
 
             _context.Images.Clear();
 
-            foreach (var (name, base64Image) in from file in Directory.GetFiles(folderpath, "*.jpg")
+            foreach (var (imageName, base64Image) in from file in Directory.GetFiles(folderpath, "*.jpg")
                                                 let imageName = Path.GetFileNameWithoutExtension(file)
-                                                where Regex.IsMatch(imageName, @"^\d{4}_(0[1-9]|1[0-2])_(0[1-9]|1[0-9]|2[0-9]|3[0-1])_.+$")
-                                                let name = imageName.Split('-').First()
                                                 let imageArray = File.ReadAllBytes(file)
                                                 let image = Convert.ToBase64String(imageArray)
                                                 let base64Image = string.Format("data:image/jpg;base64,{0}", image)
-                                                select (name, base64Image))
+                                                select (imageName, base64Image))
             {
-                var nameArray = name.Split('_');
-                _context.Images.Add(new Image(base64Image, new DateOnly(int.Parse(nameArray[0]), int.Parse(nameArray[1]), int.Parse(nameArray[2])), nameArray.Last()));
+                if (Regex.IsMatch(imageName, @"^\d{4}_(0[1-9]|1[0-2])_(0[1-9]|1[0-9]|2[0-9]|3[0-1])_.+$"))
+                {
+                    var name = imageName.Split('-').First();
+                    var nameArray = name.Split('_');
+                    _context.Images.Add(new Image(base64Image, new DateOnly(int.Parse(nameArray[0]), int.Parse(nameArray[1]), int.Parse(nameArray[2])), nameArray.Last()));
+                    continue;
+
+                }
+                _context.Images.Add(new Image(base64Image));
             }
+
+                
         }
 
         #endregion Public Methods

@@ -5,11 +5,17 @@
         <div class="card-container">
             <div class="card image-card">
                 <img class="image" src=@ImageElement.Base64Image alt=@ImageElement.Name/>
-                <div>
-                    <p class="image-sub">
-                        @ImageElement.Date - @ImageElement.Name 
-                    </p>
-                </div>
+                @{
+                    if(ImageElement.NameVisable)
+                    {
+                        <div>
+                            <p class="image-sub">
+                                @ImageElement.Date - @ImageElement.Name
+                            </p>
+                        </div>
+                    }
+                }
+               
             </div>
         </div>
     </div>

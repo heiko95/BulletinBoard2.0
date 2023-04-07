@@ -18,7 +18,11 @@ namespace hgSoftware.Infrastructure.Profiles
                            opt => opt.MapFrom(src => src.ImageName))
 
                 .ForMember(dest => dest.Date,
-                               opt => opt.MapFrom(src => src.ImageDate));
+                           opt => opt.MapFrom(src => src.ImageDate))
+
+                .ForMember(dest => dest.NameVisable,
+                           opt => opt.MapFrom(src => !string.IsNullOrEmpty(src.ImageName)));
+ 
 
             CreateMap<Image, WelcomeElement>()
                .ForMember(dest => dest.Base64Image,

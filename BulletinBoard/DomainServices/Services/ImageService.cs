@@ -28,8 +28,8 @@ namespace hgSoftware.DomainServices.Services
 
         #region Public Methods
 
-        public IList<ImageElement> GetPictures()
-            => _imageRepository.GetImages(_imageCount);
+        public IList<ImageElement> GetPictures() 
+            => _imageRepository.GetImages(_imageCount).Reverse().ToList();
 
         #endregion Public Methods
     }

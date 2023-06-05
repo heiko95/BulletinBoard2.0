@@ -28,8 +28,7 @@ namespace hgSoftware.Infrastructure.FileReaders
             if (!Directory.Exists(folderpath)) throw new DirectoryNotFoundException(folderpath);
 
             _context.Images.Clear();
-
-            foreach (var (imageName, base64Image) in from file in Directory.GetFiles(folderpath, "*.jpg")
+            foreach (var (imageName, base64Image) in from file in Directory.GetFiles(folderpath, "*.jpg").OrderByDescending(x => new FileInfo(x).CreationTime)
                                                 let imageName = Path.GetFileNameWithoutExtension(file)
                                                 let imageArray = File.ReadAllBytes(file)
                                                 let image = Convert.ToBase64String(imageArray)

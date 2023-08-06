@@ -40,6 +40,15 @@ namespace BulletinBoard.Services
 
         #region Public Methods
 
+        public async Task<IElement?> GetBibleText()
+        {
+            return await Task.Run(() =>
+            {
+                _logger.LogInformation("Load Elements");
+                return _bibleTextService.GetBibleElementOfToday();
+            });
+        }
+
         public async Task<IList<IElement>> GetCurrentElements()
         {
             return await Task.Run(() =>

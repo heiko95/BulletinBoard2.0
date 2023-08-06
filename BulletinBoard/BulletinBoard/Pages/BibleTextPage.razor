@@ -1,0 +1,31 @@
+﻿@page "/text"
+@using BulletinBoard.Services.Contracts
+@using hgSoftware.DomainServices.Models
+@using hgSoftware.DomainServices.SettingModels
+@inject IBoardElementService BoardElementService
+
+<PageTitle>BibleTextPage</PageTitle>
+
+
+
+@if (Element != null && DataIsLoaded)
+{
+    <BibleVerseCard BibleTextElement=@(Element as BibleTextElement) Direction="left"></BibleVerseCard>
+}
+
+
+@code{
+
+    IElement Element = null;
+    
+    bool DataIsLoaded = false;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await BoardElementService.InitElements();
+       
+        Element = await BoardElementService.GetBibleText();     
+        DataIsLoaded = true;
+
+    }
+}

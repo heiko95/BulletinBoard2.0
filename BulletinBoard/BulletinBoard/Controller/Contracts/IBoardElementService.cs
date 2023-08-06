@@ -7,6 +7,8 @@ namespace BulletinBoard.Services.Contracts
     {
         #region Public Methods
 
+        Task<IElement?> GetBibleText();
+
         Task<IList<IElement>> GetCurrentElements();
 
         SlideSettings GetSlideSettings();
